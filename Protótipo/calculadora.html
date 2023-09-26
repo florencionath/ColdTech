@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+         div, h1 {
+            text-align: center; /*Centralizando a div, dentro da div tem todo conteúdo do da calculadora*/
+            color: rgb(0, 0, 0); /*Cor do h1*/
+            background-color: lightblue;
+            border-radius: 5px;
+        }
+
+        input {
+            border-radius: 10px; /*Para deixar arredondado do input*/
+            border-color: blue; /*Cor da borda do input*/
+            width: 310px; /*Largura do input*/
+        }
+        button{
+            border-radius: 10px; /*Para deixar arredondado do botão*/
+            color: black; /*Cor do texto do botão*/
+            border-color: blue; /*Cor da borda do botão*/
+            cursor: pointer; /*Mãozinha do mouse quando passar em cima do botão*/
+        }
+
+        p{
+            color: black;
+        }
+       
+    </style>
+
+</head>
+<body>
+    <div class="centralizar">
+    <h1>Calculadora</h1>
+
+    <p>Informe a quantidade de medicamentos</p>
+    <input type="number" id="input_qtdMedicamentos"><br><br>
+
+    <p>Informe quanto custa cada medicamento</p>
+    <input type="number" id="input_valorUnitario"><br><br>
+
+    <p>Informe em porcentagem quanto você perde durante o transporte</p> 
+    <input type="number" id="input_perdasTransporte"><br><br>
+
+    <p>Informe em porcentagem quanto você perde durante o armazenamento</p>
+    <input type="number" id="input_perdasArmazenamento"><br><br>
+
+    <button onclick="reducao()">Ver quanto reduzirá</button><br><br>
+    <div id="div_mensagem"></div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function reducao (){
+        var quantidadeMedicamentos = Number(input_qtdMedicamentos.value);
+        var valorUnitario = Number(input_valorUnitario.value);
+        var perdasTransporte = Number(input_perdasTransporte.value); // Porcentagem que perde ao mês com transporte
+        var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
+        
+
+                                     //Calculando...
+        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+
+        var perdasMesTransporte = (valorTotalMedicamento * perdasTransporte) / 100; // PERDAS EM R$ 
+
+        var sobrouTransporte = (valorTotalMedicamento - perdasMesTransporte); // sobrou X R$
+
+        var perdasMesArmazenamento = (sobrouTransporte * perdasArmazenamento) / 100; // PERDAS DO QUE SOBROU EM R$
+
+        var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO TRANSPORTE
+
+        var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
+
+        var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
+
+        var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
+
+        div_mensagem.innerHTML = `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custando R$ ${valorUnitario} a unidade totaliza 
+             R$: ${valorTotalMedicamento} <br><br></div></b>
+
+        <b div style = "color: black">Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento </div><br><br></b>
+
+        <b div style = "color: black"> Você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.</div></b><br><br>
+
+        <b style = "color: green">Reduzirá ao todo R$ ${reducaoTotal} com nossa solução tecnológica!</b><br><br>
+        `;
+        
+    }
+</script>
