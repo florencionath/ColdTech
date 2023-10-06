@@ -263,7 +263,30 @@ p{
 }
 /*FIM SOBREPOSIÇÃO DE IMAGENS*/
 
+/*MAIS INFORMAÇÕES*/
+.mais-informacoes{
+    background-color: #001530;
+    width: 50%;
+    height: 550px;
+    margin-left: 15px;
+    border-radius: 10px;
+}
 
+.title-info {
+    color: white bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 15px;
+}
+
+h3{
+    text-align: center;
+}
+
+/*FIM MAIS INFORMAÇÕES*/
 
 
 /*INICIO FORMULÁRIO DE CONTATO*/
@@ -377,7 +400,7 @@ button{
     width: 20px; /*Defina o tamanho desejado para o ícone */
     height: 20px;
     position: absolute;
-    top: 3127px;
+    top: 3860px;
     right: 375px;
     background-color:   white;
     border-radius: 5px;
@@ -389,7 +412,7 @@ button{
     width: 20px; /*Defina o tamanho desejado para o ícone */
     height: 20px;
     position: absolute;
-    top: 3127px;
+    top: 3860px;
     right: 349px;
     background-color:  white;
     border-radius: 5px;
@@ -402,7 +425,7 @@ button{
      width: 20px; /*Defina o tamanho desejado para o ícone */
      height: 20px;
      position: absolute;
-     top: 3127px;
+     top: 3860px;
      right: 321px;
      background-color:  white;
      border-radius: 5px;
@@ -415,7 +438,7 @@ button{
      width: 20px; /*Defina o tamanho desejado para o ícone */
      height: 20px;
      position: absolute;
-     top: 3127px;
+     top: 3860px;
      right: 293px;
      background-color:  white;
      border-radius: 5px;
@@ -428,7 +451,7 @@ button{
     width: 20px; /*Defina o tamanho desejado para o ícone */
     height: 20px;
     position: absolute;
-    top: 3127px;
+    top: 3860px;
     right: 265px;
     background-color: white;
     border-radius: 5px;
@@ -443,7 +466,7 @@ button{
     height: 50px;
     color: white;
     position: absolute; /* Define o posicionamento absoluto */
-    top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+    top: 3750px; /* Define a posição vertical em relação ao elemento pai */
     left: 265px;/* Define a posição horizontal em relação ao elemento pai */
     z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
     margin: 10px;
@@ -455,7 +478,7 @@ button{
     height: 50px;
     color: white;
     position: absolute; /* Define o posicionamento absoluto */
-    top: 3115px; /* Define a posição vertical em relação ao elemento pai */
+    top: 3800px; /* Define a posição vertical em relação ao elemento pai */
     left: 270px;/* Define a posição horizontal em relação ao elemento pai */
     z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
     margin: 10px;
@@ -466,7 +489,7 @@ button{
     height: 50px;
     color: white;
     position: absolute; /* Define o posicionamento absoluto */
-    top: 3137px; /* Define a posição vertical em relação ao elemento pai */
+    top: 3820px; /* Define a posição vertical em relação ao elemento pai */
     left: 279px;/* Define a posição horizontal em relação ao elemento pai */
     z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
     margin: 10px;
@@ -478,7 +501,7 @@ button{
     height: 50px;
     color: white;
     position: absolute; /* Define o posicionamento absoluto */
-    top: 3159px; /* Define a posição vertical em relação ao elemento pai */
+    top: 3840px; /* Define a posição vertical em relação ao elemento pai */
     left: 262px;/* Define a posição horizontal em relação ao elemento pai */
     z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
     margin: 10px;
@@ -490,7 +513,7 @@ button{
         height: 50px;
         color: white;
         position: absolute; /* Define o posicionamento absoluto */
-        top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+        top: 3750px; /* Define a posição vertical em relação ao elemento pai */
         left: 703px;/* Define a posição horizontal em relação ao elemento pai */
         z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
         margin: 10px;
@@ -503,7 +526,7 @@ button{
         height: 50px;
         color: white;
         position: absolute; /* Define o posicionamento absoluto */
-        top: 3115px; /* Define a posição vertical em relação ao elemento pai */
+        top: 3800px; /* Define a posição vertical em relação ao elemento pai */
         left: 713px;/* Define a posição horizontal em relação ao elemento pai */
         z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
         margin: 10px;
@@ -515,7 +538,7 @@ button{
         height: 50px;
         color: white;
         position: absolute; /* Define o posicionamento absoluto */
-        top: 3137px; /* Define a posição vertical em relação ao elemento pai */
+        top: 3820px; /* Define a posição vertical em relação ao elemento pai */
         left: 650px;/* Define a posição horizontal em relação ao elemento pai */
         z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
         margin: 10px;
@@ -527,7 +550,7 @@ button{
         height: 50px;
         color: white;
         position: absolute; /* Define o posicionamento absoluto */
-        top:3159px; /* Define a posição vertical em relação ao elemento pai */
+        top: 3840px; /* Define a posição vertical em relação ao elemento pai */
         left: 685px;/* Define a posição horizontal em relação ao elemento pai */
         z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
         margin: 10px;
@@ -539,7 +562,7 @@ button{
             height: 50px;
             color: white;
             position: absolute; /* Define o posicionamento absoluto */
-            top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+            top: 3820px; /* Define a posição vertical em relação ao elemento pai */
             left: 1115px;/* Define a posição horizontal em relação ao elemento pai */
             z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
             margin: 10px;
@@ -552,6 +575,7 @@ button{
 span {
     color: rgb(255, 255, 255);
 }
+
 
 
 /*  Padding é a margin interna do elemento
