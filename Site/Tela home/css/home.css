@@ -1,6 +1,7 @@
 * { /*Body já vem com especificações,ele deixa uma pequena borda*/
     margin: 0; /*Quero que tire todos os lados*/
     padding: 0; /*Para ficar sem margem dentro dos elementos*/
+    font-family: 'Ubuntu', sans-serif;
 }
 
 html, body {
@@ -8,7 +9,7 @@ html, body {
 }
 
 .imagem-fundo{
-    background-image: url("../imagens/termolabel.jpg");
+    background-image: url("../imagens/fundoTermolabel2.png");
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -16,18 +17,18 @@ html, body {
     align-items: center;
     justify-content: center;   
     margin-bottom: 50px;
-    background: linear-gradient(45deg, #0CC0DF, #9bc2f5);
+    /*background: linear-gradient(45deg, #0CC0DF, #9bc2f5);*/
 }
 
 .imagem-fundo p{
-    color:#ffffff;
+    color: white;
     font-size: 50px;
     font-weight: bold;
 }
 
 
 .header{
-    background-color:#0CC0DF;
+    background-color: #001530;
     width: 100%;
     height: 100px;
     display: fixed;
@@ -71,15 +72,16 @@ html, body {
 }
 
 .logo-cold{
-    color: white;
+    color: #ffffff;
 }
 
 .logo-tech{
-    color: #004AAD;
+    color: #ffffff;
 }
 .imagem-logo{
-    width: 10%;
-    height: 100px;
+    width: 100px;
+    padding: 5px;
+    display: flex;
 }
 
 .borda-cadastro{ /*BORDA DO LINK CADASTRE-SE*/
@@ -91,7 +93,6 @@ h2{
     color: #0CC0DF;
     text-align: center;
 }
-
 
 p{
     color: rgb(88, 88, 88);
@@ -155,7 +156,7 @@ p{
     filter: hue-rotate(350deg);
     position: absolute;
     top: 38.5px;
-    left: 605px;
+    left: 590px;
 }
 
 
@@ -167,7 +168,7 @@ p{
        filter: hue-rotate(350deg);
        position: absolute;
        top: 39.5px;
-       left: 675px;
+       left: 660px;
 }
 
 .icon-contato{
@@ -178,7 +179,7 @@ p{
      filter: hue-rotate(350deg);
      position: absolute;
      top: 39.5px;
-     left: 773px;
+     left: 765px;
 
 }
 
@@ -200,11 +201,135 @@ p{
     hue-rotate(320deg);
 }
 
-.blob img{
-    width: 500px;
-    height: 500px;
+
+/*SOBREPOSIÇÃO DE IMAGENS*/
+ 
+
+.imagem-termolabel1{
+    height: 100px;
+    width: 25%;
+    z-index: 20;
+    
 }
 
+.imagem-termolabel2{
+    height: 100px;
+    width: 25%;
+    z-index: 500;
+}
+.imagem-termolabel3{
+    height: 100px;
+    width: 25%;
+    z-index: 25;
+}
+
+
+.sobrepor1{
+    width: 100%;
+    height: 275px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   left: 275px;
+   border-radius: 5px;
+   z-index: 11;
+}
+
+.sobrepor2{
+    width: 100%;
+    height: 275px;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   top:50px;
+   left: 90px;
+   border-radius: 5px;
+   z-index: 12;
+}
+
+.sobrepor3{
+    width: 25%;
+    height: 275px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top:1400px;
+   left: 30px;
+   border-radius: 5px;
+   z-index: 10;
+}
+/*FIM SOBREPOSIÇÃO DE IMAGENS*/
+
+
+
+
+/*INICIO FORMULÁRIO DE CONTATO*/
+
+fieldset{
+   width: fit-content;
+   float: right;
+   margin-right: 15px;
+   border-radius: 10px;
+}
+legend{
+    text-align: center;
+    padding: 10px;
+}
+
+.formulario{
+    float: right;
+    margin: 25px;
+   
+}
+
+.formulario .label-input{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    
+}
+
+.formulario input{
+    border-radius: 10px;
+    border-color: #001530;
+    width: 85%;
+    padding: 10px;
+    color: #001530;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    border-radius: 10px;
+    border-color: #001530;
+    width: 500px;
+    height: 250px;
+    padding: 15px;
+}
+
+button{
+    border-radius: 5px;
+    border-color: #001530;
+    color: #001530 solid bold;
+    width: 30%;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+/*FIM FORMULÁRIO DE CONTATO*/
+
+
+/*FOOTER*/
 .footer .container p{
     text-align: center;
     color: white;
@@ -215,9 +340,10 @@ p{
     background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o rodapé */
     padding: 100px; /* Espaçamento interno no rodapé */
     filter: grayscale(0%) 
-    brightness(135%)
-    sepia(2%) /**/
-    hue-rotate(327deg);
+    brightness(20%)
+    sepia(0%) /**/
+    hue-rotate(350deg);
+    height: 40px;
 
 }
 
@@ -243,13 +369,189 @@ p{
     margin-top: 75px;
 }
 
-span{
-    color:#000000;
 
+/*ICONES DO FOOTER*/
+.uil-instagram {
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('../imagens/instagram.svg');
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    position: absolute;
+    top: 3127px;
+    right: 375px;
+    background-color:   white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.uil-facebook-f {
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('../imagens/facebook-f.svg');
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    position: absolute;
+    top: 3127px;
+    right: 349px;
+    background-color:  white;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
+.uil-youtube{
+     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+     content: url('../imagens/youtube.svg');
+     width: 20px; /*Defina o tamanho desejado para o ícone */
+     height: 20px;
+     position: absolute;
+     top: 3127px;
+     right: 321px;
+     background-color:  white;
+     border-radius: 5px;
+     cursor: pointer;
+}
 
+.uil-github-alt{
+     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+     content: url('../imagens/github-alt.svg');
+     width: 20px; /*Defina o tamanho desejado para o ícone */
+     height: 20px;
+     position: absolute;
+     top: 3127px;
+     right: 293px;
+     background-color:  white;
+     border-radius: 5px;
+     cursor: pointer;
+}
 
+.uil-twitter-alt{
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('../imagens/twitter-alt.svg');
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    position: absolute;
+    top: 3127px;
+    right: 265px;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+} 
+
+/*FIM ICONES DO FOOTER*/
+
+/*COMEÇO TEXTOS DO FOOTER*/
+.t-endereco{
+    width: 20%;
+    height: 50px;
+    color: white;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+    left: 265px;/* Define a posição horizontal em relação ao elemento pai */
+    z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+    margin: 10px;
+    display: flex;
+    
+}
+ .p-telefone{
+    width: 20%;
+    height: 50px;
+    color: white;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 3115px; /* Define a posição vertical em relação ao elemento pai */
+    left: 270px;/* Define a posição horizontal em relação ao elemento pai */
+    z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+    margin: 10px;
+    display: flex;
+}
+.p-email{
+    width: 20%;
+    height: 50px;
+    color: white;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 3137px; /* Define a posição vertical em relação ao elemento pai */
+    left: 279px;/* Define a posição horizontal em relação ao elemento pai */
+    z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+    margin: 10px;
+    display: flex;
+    
+}
+.p-zap{
+    width: 20%;
+    height: 50px;
+    color: white;
+    position: absolute; /* Define o posicionamento absoluto */
+    top: 3159px; /* Define a posição vertical em relação ao elemento pai */
+    left: 262px;/* Define a posição horizontal em relação ao elemento pai */
+    z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+    margin: 10px;
+    display: flex;
+        
+    }
+.t-sobrenos{
+        width: 20%;
+        height: 50px;
+        color: white;
+        position: absolute; /* Define o posicionamento absoluto */
+        top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+        left: 703px;/* Define a posição horizontal em relação ao elemento pai */
+        z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+        margin: 10px;
+        display: flex;
+        
+        
+}
+     .p-servicos{
+        width: 20%;
+        height: 50px;
+        color: white;
+        position: absolute; /* Define o posicionamento absoluto */
+        top: 3115px; /* Define a posição vertical em relação ao elemento pai */
+        left: 713px;/* Define a posição horizontal em relação ao elemento pai */
+        z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+        margin: 10px;
+        display: flex;
+        
+}
+    .p-politica{
+        width: 20%;
+        height: 50px;
+        color: white;
+        position: absolute; /* Define o posicionamento absoluto */
+        top: 3137px; /* Define a posição vertical em relação ao elemento pai */
+        left: 650px;/* Define a posição horizontal em relação ao elemento pai */
+        z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+        margin: 10px;
+        display: flex;
+        
+}
+    .p-regras{
+        width: 20%;
+        height: 50px;
+        color: white;
+        position: absolute; /* Define o posicionamento absoluto */
+        top:3159px; /* Define a posição vertical em relação ao elemento pai */
+        left: 685px;/* Define a posição horizontal em relação ao elemento pai */
+        z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+        margin: 10px;
+        display: flex;
+            
+        }
+    .t-redes-sociais{
+            width: 20%;
+            height: 50px;
+            color: white;
+            position: absolute; /* Define o posicionamento absoluto */
+            top: 3093px; /* Define a posição vertical em relação ao elemento pai */
+            left: 1115px;/* Define a posição horizontal em relação ao elemento pai */
+            z-index: 999; /* Define a ordem de empilhamento, um valor alto garante que este elemento fique sobre o footer */
+            margin: 10px;
+            display: flex;
+            
+            
+    }
+    /*FIM TEXTOS DO FOOTER*/
+
+span {
+    color: rgb(255, 255, 255);
+}
 
 
 /*  Padding é a margin interna do elemento
