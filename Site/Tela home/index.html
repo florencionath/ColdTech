@@ -5,12 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!--FONT UBUNTU-->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="header"> <!--DIV HEADER-->
         <div class="card-logo">
-        <img class="imagem-logo" src="./imagens/logoTeste.png">
+        <img class="imagem-logo" src="./imagens/logoPng.png">
         </div>
         <div class="container"> <!--DIV CONTAINER-->
             <h1 class="logo-cold">Cold<span class="logo-tech">Tech</span></h1>
@@ -25,14 +30,14 @@
 
 
                     <li class="sobre">
-                        <a href="#">
+                        <a href="#sobre-nos">
                             <i class="uil uil-arrow-circle-down icon-sobre"></i>Sobre nós
                         </a>
                     </li>
 
 
                     <li class="contato">
-                        <a href="#" class="nav-link">
+                        <a href="#formulario" class="nav-link">
                             <i class="uil uil-phone icon-contato"></i>Contato
                         </a>
                     </li>
@@ -64,7 +69,7 @@
             <p>Olá, somos a ColdTech!</p>
     </div>
     
-    <div class="sobre-nos"> 
+    <div class="sobre-nos" id="sobre-nos"> 
         <h2>SOBRE NÓS</h2>
         <p>
             COLDTECH uma empresa que trás soluções em monitoramento de<br>
@@ -95,15 +100,69 @@
         </div>
     </section>
 
-
+    <!--IMAGENS SOBREPOSTAS-->
     <h3>
         MONITORAMENTE DE TEMPERATURA E UMIDADE<br>
         AJUDA NOS PRINCIPAIS PROBLEMAS EM SAÚDE
     </h3>
     
-    <div class="blob">
-    <img src="./imagens/transporte.jpg" alt="">
-    </div>      
+    <div class="imagens-sobrepostas"></div>
+    <div class="imagem-termolabel1">
+        <img src="./imagens/termolabel-yellow.jpg" alt="" class="sobrepor1"> 
+    </div>
+
+    <div class="imagem-termolabel2">
+        <img src="./imagens/covid-red.jpg" alt=""  class="sobrepor2">
+    </div>
+
+    <div class="imagem-termolabel3">
+        <img src="./imagens/covid.jpg" alt=""  class="sobrepor3">
+    </div>
+    </div>
+
+    <!--FIM IMAGENS SOBREPOSTAS-->
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!--AREA DO FORMULÁRIO-->
+        
+<fieldset>
+    <legend>Contato</legend>
+    <div class="formulario">
+            <form action="" method="" id="formulario">
+                <div class="label-input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" maxlength="40">
+                </div>
+
+                <div  class="label-input">
+                    <label for="email">E-mail:</label>
+                    <input type="text" id="email" maxlength="40">
+                </div>
+
+                <div  class="label-input" class="label-input">
+                    <label for="msg"></label>
+                    <textarea name="campo" id="mensagem" cols="30" rows="10" placeholder="digite uma mensagem" class="textarea"></textarea>
+                </div>
+
+                <div class="button">
+                    <button type="submit">Enviar sua mensagem</button>
+                </div>
+            </form>
+        </div>
+    </fieldset>
+
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--FIM AREA DO FORMULÁRIO-->
+
+    <!--
+        https://developer.mozilla.org/pt-BR/docs/Learn/Forms/Your_first_form
+    -->
 
 <!--CRIAR AQUI OS DEMAIS CONTEÚDOS-->
 
@@ -111,31 +170,37 @@
             <div class="container">
                 <div class="imagem-footer">
                  
-                    <div class="foo">
-                        <span>Endereço</span>
-                        <p>Telefone</p>
-                        <p>E-mail</p>
-                        <p>WhatsApp</p>
-                    </div>
-
-                    <div class="foo">
-                        <span>Sobre nós</span>
-                        <p>Serviços</p>
-                        <p>Política de Privacidade</p>
-                        <p>Regras do Site</p>
-                    </div>
-
-                    <div class="foo">
-                        <span>Redes Sociais</span>
-                        <p>Instagram</p>
-                        <p>Facebook</p>
-                        <p>Youtube</p>
-                        <p>X</p>
-                        <p>GitHub</p>
                 </div>
             </div>
         </div>
     </footer>
 
+        <!--COMEÇO TEXTO DO FOOTER-->
+
+    <div class="endereco-footer">
+        <b> <p class="t-endereco">Endereço</p></b>
+            <p class="p-telefone">Telefone</p>
+            <p class="p-email">E-mail</p>
+            <p class="p-zap">WhatsApp</p>
+    </div>
+
+    <div class="sobrenos-footer">
+        <b><p class="t-sobrenos">Sobre nós</p></b>
+           <p class="p-servicos">Serviços</p>
+           <p class="p-politica">Política de Privacidade</p>
+           <p class="p-regras">Regras do Site</p>
+
+    </div>
+
+    <div class="redes-sociais">
+        <b> <p class="t-redes-sociais">Redes Sociais</p></b>
+            <i class="uil uil-instagram"></i>
+            <i class="uil uil-facebook-f"></i>
+            <i class="uil uil-youtube"></i>
+            <i class="uil uil-github-alt"></i>
+            <i class="uil uil-twitter-alt"></i>
+    </div>
+
+        <!--FIM TEXTO FOOTER-->
 </body>
 </html>
