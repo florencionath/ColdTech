@@ -24,21 +24,37 @@
                 <ul>
                     <li class="inicio">
                         <a href="#">
-                            <i class="uil uil-estate icon-home"></i>Início
+                            Início
                         </a>
                     </li>
-
 
                     <li class="sobre">
                         <a href="#sobre-nos">
-                            <i class="uil uil-arrow-circle-down icon-sobre"></i>Sobre nós
+                            Sobre nós
                         </a>
                     </li>
 
+                    <li class="termo">
+                        <a href="#termolabeis">
+                           Termolabeis
+                        </a>
+                    </li>
+
+                    <li class="desperdicio">
+                        <a href="#desperdicio">
+                           Desperdício
+                        </a>
+                    </li>
+
+                    <li class="solucao">
+                        <a href="#solucao">
+                            Solução
+                        </a>
+                    </li>
 
                     <li class="contato">
-                        <a href="#formulario" class="nav-link">
-                            <i class="uil uil-phone icon-contato"></i>Contato
+                        <a href="#contato" class="nav-link">
+                            Contato
                         </a>
                     </li>
 
@@ -59,7 +75,6 @@
                 </li>  
                 </ul>
 
-
             </div> <!--FIM CADASTRO-LOGIN-->
         </div> <!--FIM DIV CONTAINER-->
     </div> <!--FIM DIV HEADER-->
@@ -75,7 +90,7 @@
             COLDTECH uma empresa que trás soluções em monitoramento de<br>
             sensores e automatização na gestão de métricas
         </p>
-        </div> 
+    </div> 
 
 
     <section id="social">
@@ -100,37 +115,81 @@
         </div>
     </section>
 
-    <!--IMAGENS SOBREPOSTAS-->
-    <h3>
-        MONITORAMENTE DE TEMPERATURA E UMIDADE<br>
-        AJUDA NOS PRINCIPAIS PROBLEMAS EM SAÚDE
-    </h3>
+
+    <!--TÍTULO IMAGENS SOBREPOSTAS-->
+<div class="title-sobreposicao" id="termolabeis">
+    <p class="p-sobreposicao">
+        SOBRE MEDICAMENTOS TERMOLÁBEIS
+    </p>
+</div><!--FIM TÍTULO IMAGENS SOBREPOSTAS-->
     
-    <div class="imagens-sobrepostas"></div>
-    <div class="imagem-termolabel1">
-        <img src="./imagens/termolabel-yellow.jpg" alt="" class="sobrepor1"> 
+
+<!--IMAGENS DE SOBREPOSIÇÃO-->
+<section class="section-sobreposicao">
+    <div class="imagens-sobrepostas">
+            <div class="imagem-termolabel1">
+                <img src="./imagens/termolabel-yellow.jpg" alt="" class="sobrepor1"> 
+            </div>
+
+            <div class="imagem-termolabel2">
+                <img src="./imagens/covid-red.jpg" alt=""  class="sobrepor2">
+            </div>
+
+            <div class="imagem-termolabel3">
+                <img src="./imagens/covid.jpg" alt=""  class="sobrepor3">
+            </div>
+    </div>
+</section><!--FIM IMAGENS SOBREPOSTAS-->
+
+
+ <!--ÁREA SOBRE OS TERMOLABEIS-->
+ <div class="termolabeis">
+    <span class="medicamentos">medicamentos Termolabeis</span>
+    <br><br>
+    <p>Os medicamentos termolábeis são produtos sensíveis<br>
+         à variação de temperatura e, por isso, devem ser armazenados<br> 
+         e transportados sob refrigeração conforme recomendado pelos<br>
+         seus respectivos fabricantes.<br><br><br><br><br>
+         Eles necessitam de cuidados especiais nesse sentido,<br> 
+         pois têm propriedades físico-químicas diferenciadas.<br>
+         Esses medicamentos precisam estar numa temperatura<br>
+         que varia de 2 a 8°C. 
+        </p>
+</div>
+  <!--FIM ÁREA SOBRE OS TERMOLABEIS-->
+
+    
+
+    <!--ÁREA DOS GRÁFICOS-->
+
+    <div class="title-graphics" id="desperdicio"> 
+        <span class="graphics">Desperdício</span>
     </div>
 
-    <div class="imagem-termolabel2">
-        <img src="./imagens/covid-red.jpg" alt=""  class="sobrepor2">
-    </div>
+<div class="graphics-home">
+    <img src="./imagens/graficopng.png" alt="">
+</div>
 
-    <div class="imagem-termolabel3">
-        <img src="./imagens/covid.jpg" alt=""  class="sobrepor3">
-    </div>
-    </div>
-
-    <!--FIM IMAGENS SOBREPOSTAS-->
+<div class="info-graphics">
+    <span class="informacao-grafico">Informações</span>
+</div>
+    <!--FIM ÁREA DOS GRÁFICOS-->
 
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<!--ÁREA DA SOLUÇÃO-->
+<div class="solucao">
+    <h3 id="solucao">SOLUÇÃO</h3>
+    <img src="./imagens/trabalhoPrancheta 1Prancheta 1.jpg" alt="">
+</div>
+<!--FIM ÁREA DA SOLUÇÃO-->
+
+    
     <!--AREA DO FORMULÁRIO-->
-    
-<div>
+    <span class="contate-nos" id="contato">Contate-nos</span>
 <fieldset>
     <legend>Contato</legend>
     <div class="formulario">
-            <form action="" method="" id="formulario">
+            <form action="" method="">
                 <div class="label-input">
                     <label for="nome">Nome:</label>
                     <input type="text" id="nome" maxlength="40">
@@ -138,12 +197,12 @@
 
                 <div  class="label-input">
                     <label for="email">E-mail:</label>
-                    <input type="text" id="email" maxlength="40">
+                    <input type="text" id="email" maxlength="40" placeholder="exemplo@gmail.com">
                 </div>
 
                 <div  class="label-input" class="label-input">
                     <label for="msg"></label>
-                    <textarea name="campo" id="mensagem" cols="30" rows="10" placeholder="digite uma mensagem" class="textarea"></textarea>
+                    <textarea name="campo" id="mensagem" cols="30" rows="10" placeholder="Digite uma mensagem..." class="textarea"></textarea>
                 </div>
 
                 <div class="button">
@@ -152,37 +211,15 @@
             </form>
         </div>
     </fieldset>
-
-    <!--ÁREA DE MAIS INFORMAÇÕES-->
-    <h3 id="contate-nos">Contate-nos</h3>
-    <div class="mais-informacoes" id="mais-informacoes">
-                <span class="title-info">Mais informações</span>
-
-    </div>
-      <!--FIM ÁREA DE MAIS INFORMAÇÕES-->
-
-    <!--GABRIEL-->
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <!--FIM AREA DO FORMULÁRIO-->
 
-    <!--
-        https://developer.mozilla.org/pt-BR/docs/Learn/Forms/Your_first_form
-    -->
 
-<!--CRIAR AQUI OS DEMAIS CONTEÚDOS-->
+    <!--ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
+    <div class="mais-informacoes" id="mais-informacoes">
+        <span class="title-info">Mais informações</span>
+    </div>
+      <!--FIM ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
 
-    <footer class="footer">
-            <div class="container">
-                <div class="imagem-footer">
-                 
-                </div>
-            </div>
-        </div>
-    </footer>
 
         <!--COMEÇO TEXTO DO FOOTER-->
 
@@ -208,8 +245,17 @@
             <i class="uil uil-youtube"></i>
             <i class="uil uil-github-alt"></i>
             <i class="uil uil-twitter-alt"></i>
-    </div>
+    </div> <!--FIM TEXTO FOOTER-->
 
-        <!--FIM TEXTO FOOTER-->
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="imagem-footer">
+             
+            </div>
+        </div>
+</footer>
+  
 </body>
 </html>
