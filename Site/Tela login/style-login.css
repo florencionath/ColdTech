@@ -2,7 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: 'Ubuntu', sans-serif;
-  
+  border: none;
+}
+
+body{
+    background: #ececf4ee;
 }
 
 
@@ -70,35 +74,139 @@
     border: 1.3px white solid; 
 }
 
+.icon-home {
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('./assets/home.svg');
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    filter: hue-rotate(350deg);
+    position: absolute;
+    top: 38.5px;
+    left: 590px;
+}
+
+
+.icon-sobre {
+       /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+       content: url('./assets/sobre.svg');
+       width: 20px; /*Defina o tamanho desejado para o ícone */
+       height: 20px;
+       filter: hue-rotate(350deg);
+       position: absolute;
+       top: 39.5px;
+       left: 660px;
+}
+
+.icon-contato{
+     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+     content: url('./assets/contato.svg');
+     width: 20px; /*Defina o tamanho desejado para o ícone */
+     height: 20px;
+     filter: hue-rotate(350deg);
+     position: absolute;
+     top: 39.5px;
+     left: 765px;
+}
+
+.icon-login {
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('./assets/login.svg');
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    filter: hue-rotate(350deg);
+    position: absolute;
+    top: 39.5px;
+    right: 145px;
+}
+
+
 .card{
     display: flex;
+    padding-top: 25px;
+    justify-content: space-evenly;
+}
+
+.img_login {
+    /* margin-top:100px; */
+    width: 30%;
+    padding-top: 100px
+
+}
+
+.imagem_login{
+    /* width: 40vw;
+    height: 60vh; */
+    width: 100%;
+    height: 455px;
+    border-radius: 15px;
 }
 
 .card_login {
-    border: 1px solid black;
+    box-shadow: 0 0 10px 4px #ffffff;
+    border: none;
+    border-radius: 15px;
+
+    align-items: center;
+    padding: 20px;
+    width: 30%;
+    max-height: 450px;
+    /* height: 35vh; */
+    margin-top: 100px;
+}
+
+.titulo_login {
+    display: flex;
+    justify-content: center;
+}
+
+.container_input {
     display: flex;
     margin: auto;
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    width: 24%;
-    height: 30vh;
-    margin-top: 10%;
+    width: 40%;
+    gap: 24px;
 }
 
-.imagem_login{
-    width: 40vw;
-    height: 60vh;
+
+
+.ipt_senha, .ipt_email {
+    border: 1px solid;
+    border-radius: 8px;
+    padding-left: 5px;
+    padding-left: 10px
 }
 
-.email .senha{
-     border: 1px solid black;
-     border-radius: 10px;
+.ipt_senha, .ipt_email, .botao{
+    width: 270px;
+    height: 30px;
 }
 
-p {
+
+.email, .senha {
     margin: 20px 0 10px 0;
 }
+
+.recuperar_senha{
+    font-size: 9px;
+    margin-top: 5px;
+    color: black;
+
+}
+
+.botao{
+    padding: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    background: #001530 ;
+    box-shadow: 7px 6px 4px -5px #001530;
+    margin-top: 20px;
+    color: white
+}
+
 
 .footer .container p{
     text-align: center;
@@ -106,7 +214,7 @@ p {
 }
 
 .footer .container .imagem-footer{
-    background-image: url('../imagens/wave2.png'); /* Substitua pelo caminho correto para a sua imagem */
+    background-image: url('./assets/wave2.png'); /* Substitua pelo caminho correto para a sua imagem */
     background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o rodapé */
     padding: 100px; /* Espaçamento interno no rodapé */
     filter: grayscale(0%) 
@@ -116,11 +224,31 @@ p {
 
 }
 
+/*
 .foo {
   display: inline-block;
-  width: 30%; /* Defina a largura desejada para cada div */
-  margin: 10px; /* Adicione margens para separação entre as divs */
-  padding: 10px; /* Adicione espaço interno */
+  width: 30%;  Defina a largura desejada para cada div 
+  margin: 10px;  Adicione margens para separação entre as divs 
+  padding: 10px; Adicione espaço interno 
+}*/
+
+.container_infor_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.container_icones, .foo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 150px;
+    
+}
+
+.icones{
+    display: flex;
+
 }
 
 .container .imagem-footer{
@@ -134,30 +262,39 @@ p {
   height: 150px;
 }
 
-.imagem-footer .foo{
+.imagem-footer { /*.foo*/
     margin-top: 75px;
 }
 
+/* #ececf4   #f4f4fc  #ececf4ee */
 
-
-.uil-instagram {
-    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-    content: url('../imagens/instagram.svg');
+.icone_instagram, .icone_facebook, .icone_youtube, .icone_github, .icone_twitter {
     width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    background-color:   white;
+    margin: 0 3px;
+    border-radius: 5px;
+}
+
+.icone_instagram {
+    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    content: url('./assets/instagram.svg');
+    /*Defina o tamanho desejado para o ícone */
+    /* width: 20px; 
     height: 20px;
     filter: hue-rotate(350deg);
     position: absolute;
     top: 210px;
     right: 350px;
-    background-color:   rgb(213, 40, 40);
+    background-color:   white;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
-.uil-facebook-f {
+.icone_facebook {
     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-    content: url('../imagens/rocket.svg');
-    width: 20px; /*Defina o tamanho desejado para o ícone */
+    content: url('./assets/facebook-f.svg');
+    /* width: 20px; 
     height: 20px;
     filter: hue-rotate(350deg);
     position: absolute;
@@ -165,13 +302,13 @@ p {
     right: 320px;
     background-color:  white;
     border-radius: 5px;
-    cursor: pointer;
+    cursor: pointer; */
 }
 
-.uil-youtube{
+.icone_youtube{
      /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-     content: url('../imagens/youtube.svg');
-     width: 20px; /*Defina o tamanho desejado para o ícone */
+     content: url('./assets/youtube.svg');
+     /* width: 20px; 
      height: 20px;
      filter: hue-rotate(350deg);
      position: absolute;
@@ -179,13 +316,13 @@ p {
      right: 290px;
      background-color:  white;
      border-radius: 5px;
-     cursor: pointer;
+     cursor: pointer; */
 }
 
-.uil-github-alt{
+.icone_github{
      /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-     content: url('../imagens/github-alt.svg');
-     width: 20px; /*Defina o tamanho desejado para o ícone */
+     content: url('./assets/github-alt.svg');
+     /* width: 20px; 
      height: 20px;
      filter: hue-rotate(350deg);
      position: absolute;
@@ -193,13 +330,13 @@ p {
      right: 260px;
      background-color:  white;
      border-radius: 5px;
-     cursor: pointer;
+     cursor: pointer; */
 }
 
-.uil-twitter-alt{
+.icone_twitter{
         /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-        content: url('../imagens/twitter-alt.svg');
-        width: 20px; /*Defina o tamanho desejado para o ícone */
+        content: url('./assets/twitter-alt.svg');
+        /* width: 20px; 
         height: 20px;
         filter: hue-rotate(350deg);
         position: absolute;
@@ -207,12 +344,13 @@ p {
         right: 230px;
         background-color: white;
         border-radius: 5px;
-        cursor: pointer;
+        cursor: pointer; */
 }
 
 .titles-footer{
     text-transform: uppercase;
     color: white;
+    margin-bottom: 10px;
 }
 
 
