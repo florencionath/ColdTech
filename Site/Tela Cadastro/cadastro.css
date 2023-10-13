@@ -1,0 +1,18 @@
+#div_nome, #div_email, #div_senha, #div_confirmacao, #div_cnpj {
+color: green;
+}
+    
+#div_nomeErrado, #div_emailErrado, #div_senhaErrada, #div_confirmacaoErrada, #div_cnpjErrado {
+color: red;    
+}
+
+.geral{
+   width: 300px;
+   height: 300px;
+}
+
+#input_nome, #input_email, #input_senha, #input_confirmacao, #input_cnpj{
+border-radius: 15px;    
+border: black solid;
+}
+
