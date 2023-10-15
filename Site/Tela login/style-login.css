@@ -74,39 +74,7 @@ body{
     border: 1.3px white solid; 
 }
 
-.icon-home {
-    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-    content: url('./assets/home.svg');
-    width: 20px; /*Defina o tamanho desejado para o ícone */
-    height: 20px;
-    filter: hue-rotate(350deg);
-    position: absolute;
-    top: 38.5px;
-    left: 590px;
-}
 
-
-.icon-sobre {
-       /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-       content: url('./assets/sobre.svg');
-       width: 20px; /*Defina o tamanho desejado para o ícone */
-       height: 20px;
-       filter: hue-rotate(350deg);
-       position: absolute;
-       top: 39.5px;
-       left: 660px;
-}
-
-.icon-contato{
-     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
-     content: url('./assets/contato.svg');
-     width: 20px; /*Defina o tamanho desejado para o ícone */
-     height: 20px;
-     filter: hue-rotate(350deg);
-     position: absolute;
-     top: 39.5px;
-     left: 765px;
-}
 
 .icon-login {
     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
@@ -127,15 +95,12 @@ body{
 }
 
 .img_login {
-    /* margin-top:100px; */
     width: 30%;
     padding-top: 100px
 
 }
 
 .imagem_login{
-    /* width: 40vw;
-    height: 60vh; */
     width: 100%;
     height: 455px;
     border-radius: 15px;
@@ -150,7 +115,6 @@ body{
     padding: 20px;
     width: 30%;
     max-height: 450px;
-    /* height: 35vh; */
     margin-top: 100px;
 }
 
@@ -180,7 +144,7 @@ body{
 
 .ipt_senha, .ipt_email, .botao{
     width: 270px;
-    height: 30px;
+    height: 40px;
 }
 
 
@@ -189,8 +153,8 @@ body{
 }
 
 .recuperar_senha{
-    font-size: 9px;
-    margin-top: 5px;
+    font-size: 14px;
+    margin-top: 8px;
     color: black;
 
 }
@@ -213,40 +177,42 @@ body{
     color: white;
 }
 
-.footer .container .imagem-footer{
-    background-image: url('./assets/wave2.png'); /* Substitua pelo caminho correto para a sua imagem */
-    background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o rodapé */
-    padding: 100px; /* Espaçamento interno no rodapé */
-    filter: grayscale(0%) 
-    brightness(25%)
-    sepia(2%) /**/
-    hue-rotate(355deg);
+.footer {
+    margin-top: 40px;
+   
 
 }
 
-/*
-.foo {
-  display: inline-block;
-  width: 30%;  Defina a largura desejada para cada div 
-  margin: 10px;  Adicione margens para separação entre as divs 
-  padding: 10px; Adicione espaço interno 
-}*/
+.teste {
+    background-color: #001530;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+
+}
+ .info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    align-items: flex-start;
+    gap: 2px;
+
+ }
 
 .container_infor_footer{
     display: flex;
     justify-content: space-around;
     width: 100%;
+    align-items: self-start;
+
+    margin-bottom: 50px;
 }
 
-.container_icones, .foo {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    height: 150px;
-    
-}
 
-.icones{
+
+.icones-flex{
     display: flex;
 
 }
@@ -266,85 +232,37 @@ body{
     margin-top: 75px;
 }
 
-/* #ececf4   #f4f4fc  #ececf4ee */
 
-.icone_instagram, .icone_facebook, .icone_youtube, .icone_github, .icone_twitter {
+
+.icones {
     width: 20px; /*Defina o tamanho desejado para o ícone */
     height: 20px;
     background-color:   white;
     margin: 0 3px;
     border-radius: 5px;
+    background-color: transparent;
+    color: red;
 }
 
-.icone_instagram {
-    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+.instagram {
     content: url('./assets/instagram.svg');
-    /*Defina o tamanho desejado para o ícone */
-    /* width: 20px; 
-    height: 20px;
-    filter: hue-rotate(350deg);
-    position: absolute;
-    top: 210px;
-    right: 350px;
-    background-color:   white;
-    border-radius: 5px;
-    cursor: pointer; */
 }
 
-.icone_facebook {
-    /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+.facebook {
+    
     content: url('./assets/facebook-f.svg');
-    /* width: 20px; 
-    height: 20px;
-    filter: hue-rotate(350deg);
-    position: absolute;
-    top: 210px;
-    right: 320px;
-    background-color:  white;
-    border-radius: 5px;
-    cursor: pointer; */
 }
 
-.icone_youtube{
-     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+.youtube{
      content: url('./assets/youtube.svg');
-     /* width: 20px; 
-     height: 20px;
-     filter: hue-rotate(350deg);
-     position: absolute;
-     top: 210px;
-     right: 290px;
-     background-color:  white;
-     border-radius: 5px;
-     cursor: pointer; */
 }
 
-.icone_github{
-     /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+.github{
      content: url('./assets/github-alt.svg');
-     /* width: 20px; 
-     height: 20px;
-     filter: hue-rotate(350deg);
-     position: absolute;
-     top: 210px;
-     right: 260px;
-     background-color:  white;
-     border-radius: 5px;
-     cursor: pointer; */
 }
 
-.icone_twitter{
-        /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+.twitter{
         content: url('./assets/twitter-alt.svg');
-        /* width: 20px; 
-        height: 20px;
-        filter: hue-rotate(350deg);
-        position: absolute;
-        top: 210px;
-        right: 230px;
-        background-color: white;
-        border-radius: 5px;
-        cursor: pointer; */
 }
 
 .titles-footer{
