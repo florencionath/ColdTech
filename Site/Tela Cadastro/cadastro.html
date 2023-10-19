@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js"></script>
+</head>
+
+<header>
+
+    <div class="header"> <!--DIV HEADER-->
+        <!-- <div class="card-logo">
+            <img class="imagem-logo" src="./assets/logoPng.png">
+        </div> -->
+        <div class="container"> <!--DIV CONTAINER-->
+            <!-- <h1 class="logo-cold">Cold<span class="logo-tech">Tech</span></h1> -->
+            <img class="imagem-logo" src="../Tela login/assets/logoPng.png">
+
+            <div class="navbar"> <!--DIV NAVBAR-->
+                <ul>
+                    <li class="inicio">
+                        <a href="../Tela home/index.html">
+                            Início
+                        </a>
+                    </li>
+
+                    <li class="sobre">
+                        <a href="../Tela home/index.html#sobre-nos">
+                            Sobre nós
+                        </a>
+                    </li>
+
+                    <li class="termo">
+                        <a href="../Tela home/index.html#termolabeis">
+                            Termolabeis
+                        </a>
+                    </li>
+
+                    <li class="desperdicio">
+                        <a href="../Tela home/index.html#desperdicio">
+                            Desperdício
+                        </a>
+                    </li>
+
+                    <li class="solucao">
+                        <a href="../Tela home/index.html#solucao">
+                            Solução
+                        </a>
+                    </li>
+
+                    <li class="contato">
+                        <a href="../Tela home/index.html#contato" class="nav-link">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+            </div> <!--FIM DIV NAVBAR-->
+
+            <div class="cadastro-login"> <!--DIV CADASTRO-LOGIN-->
+                <ul>
+                    <li class="borda-cadastro">
+                        <a href="../Tela Cadastro/cadastro.html">
+                            <b><i class=" icon-cadastro"></i></b>Cadastre-se
+                        </a>
+                    </li>
+
+                    <li><a href="../Tela login/login.html">
+                            <b><b><i class=" icon-login"></i></b>Login</b>
+                        </a>
+                    </li>
+                </ul>
+
+
+            </div> <!--FIM CADASTRO-LOGIN-->
+        </div> <!--FIM DIV CONTAINER-->
+    </div> <!--FIM DIV HEADER-->
+
+</header>
+
+<body>
+
+    <!-- A estilização está toda dentro do CSS, no geral só coloquei vermelho nas divs com o texto de erro e verde no texto de validação positiva -->
+    <section class="card_flex">
+
+    
+    <div class="card">
+
+        <h1 class="titulo_cadastro">Cadastre-se</h1>
+        
+
+            <div class="container_inputs">
+                Nome <br> <input oninput="Exibir()" type="text" id="input_nome"
+                    placeholder="informe o nome de sua empresa">
+                <div id="div_nome"></div> <br> <!-- Div caso o nome corresponda aos requisitos -->
+                <div id="div_nomeErrado"></div> <br> <!-- Div caso o nome não corresponda aos requisitos -->
+            </div>
+
+            <div class="container_inputs">
+                E-mail <br> <input oninput="Exibir()" type="text" id="input_email" placeholder="Informe seu e-mail">
+                <div id="div_email"></div> <br> <!-- Div caso o email corresponda aos requisitos -->
+                <div id="div_emailErrado"></div> <br> <!-- Div caso o email não corresponda aos requisitos -->
+            </div>
+
+            <div class="container_inputs">
+                CNPJ <br> <input oninput="Exibir()" type="text" id="input_cnpj" placeholder="Informe seu CNPJ">
+                <div id="div_cnpj"></div> <br> <!-- Div caso o cnpj corresponda aos requisitos -->
+                <div id="div_cnpjErrado"></div> <br> <!-- Div caso o CNPJ não corresponda aos requisitos -->
+            </div>
+
+            <div class="container_inputs">
+                Senha <br> <input oninput="Exibir()" type="password" id="input_senha" placeholder="Informe uma senha">
+                <div id="div_senha"></div> <br> <!-- Div caso a senha corresponda aos requisitos -->
+                <div id="div_senhaErrada"></div> <br> <!-- Div caso a senha não corresponda aos requisitos -->
+            </div>
+
+            <div class="container_inputs">
+                Confirmação senha <br> <input oninput="Exibir()" type="password" id="input_confirmacao"
+                    placeholder="Confirme a senha">
+                <div id="div_confirmacao"></div> <br> <!-- Div caso a confirmação esteja igual a senha -->
+                <div id="div_confirmacaoErrada"></div> <br> <!-- Div caso a confirmação esteja diferente da senha -->
+            </div>
+
+        
+
+
+        <button class="botao" onclick="Exibir()">Cadastrar </button> <br>
+    </div>
+
+    </section>
+
+
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <!-- <img class="teste" src="assets/teste-1.png" alt=""> -->
+        <div class="container_footer">
+
+            <div class="container_infor_footer">
+                <div class="info-footer">
+                    <span class="titles-footer">Endereço</span>
+                    <p>Telefone</p>
+                    <p>E-mail</p>
+                    <p>WhatsApp</p>
+                </div>
+
+                <div class="info-footer">
+                    <span class="titles-footer">Sobre nós</span>
+                    <p>Serviços</p>
+                    <p>Política de Privacidade</p>
+                    <p>Regras do Site</p>
+                </div>
+
+                <div class="info-footer">
+                    <span class="titles-footer">Redes Sociais</span>
+                    <div class="icones-flex">
+                        <i class="instagram icones"></i>
+                        <i class="facebook icones"></i>
+                        <i class="youtube icones"></i>
+                        <i class="github icones"></i>
+                        <i class="twitter icones"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+</html>

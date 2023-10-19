@@ -1,54 +1,7 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Validacao Cadastro</title>
-    <link rel="stylesheet" href="cadastro.css">
-</head>
-
-<body>
-    
-    <!-- A estilização está toda dentro do CSS, no geral só coloquei vermelho nas divs com o texto de erro e verde no texto de validação positiva -->
-
-<container class="geral"> 
-    
-    Nome <br> <input oninput="Exibir()" type="text" id="input_nome" placeholder="informe o nome de sua empresa">
-    <div id="div_nome"></div> <br> <!-- Div caso o nome corresponda aos requisitos -->
-    <div id="div_nomeErrado"></div> <br> <!-- Div caso o nome não corresponda aos requisitos -->
-    
-    E-mail <br> <input oninput="Exibir()" type="text" id="input_email" placeholder="Informe seu e-mail"> 
-    <div id="div_email"></div> <br> <!-- Div caso o email corresponda aos requisitos -->
-    <div id="div_emailErrado"></div> <br> <!-- Div caso o email não corresponda aos requisitos -->
-    
-    CNPJ <br> <input oninput="Exibir()" type="text" id="input_cnpj" placeholder="Informe seu CNPJ"> 
-    <div id="div_cnpj"></div> <br> <!-- Div caso o cnpj corresponda aos requisitos -->
-    <div id="div_cnpjErrado"></div> <br> <!-- Div caso o CNPJ não corresponda aos requisitos -->
-    
-    Senha <br> <input oninput="Exibir()" type="password" id="input_senha" placeholder="Informe uma senha"> 
-    <div id="div_senha"></div> <br> <!-- Div caso a senha corresponda aos requisitos -->
-    <div id="div_senhaErrada"></div> <br> <!-- Div caso a senha não corresponda aos requisitos -->
-    
-    Confirmação senha <br> <input oninput="Exibir()" type="password" id="input_confirmacao" placeholder="Confirme a senha"> 
-    <div id="div_confirmacao"></div> <br> <!-- Div caso a confirmação esteja igual a senha -->
-    <div id="div_confirmacaoErrada"></div> <br> <!-- Div caso a confirmação esteja diferente da senha -->
-    
-</container>
-    
-
-<button onclick="Exibir()">Cadastrar </button> <br>
-
-
-    
-</body>
-</html>
-
-<script> 
-
 // Div's fora da "funtion" para a mensagem já aparecer quando a tela carregar 
 div_nomeErrado.innerHTML = `O nome deve conter mais de 7 caracteres`;
 div_emailErrado.innerHTML = `Informe um e-mail válido`;
-div_senhaErrada.innerHTML = `A senha deve conter mais de 8 caracteres e pelo menos um caracter especial`;
+div_senhaErrada.innerHTML = `A senha deve conter mais de 8 caracteres <br> e pelo menos um caracter especial`;
 div_confirmacaoErrada.innerHTML = `Digite a senha novamente`;
 div_cnpjErrado.innerHTML = `Informe um CNPJ válido`;
 
@@ -111,9 +64,9 @@ function Exibir(){
                 || senha.indexOf('&') >= 0
                 || senha.indexOf('*') >= 0)
                 ) {
-                    div_senha.innerHTML = `Sua senha é válida! <br>`
+                    div_senha.innerHTML = ` Sua senha é válida! <br>`
                 }else {
-                    div_senhaErrada.innerHTML = `Sua senha deve possuir ao menos 8 caracteres e pelo menos um caracter especial! <br>`
+                    div_senhaErrada.innerHTML = `Sua senha deve possuir ao menos 8 caracteres <br> e pelo menos um caracter especial! <br>`
                 }             
                     
                         
@@ -122,7 +75,3 @@ function Exibir(){
                         } else {div_confirmacaoErrada.innerHTML = `A confirmação deve ser identica a senha! <br>`}   
                         
     }           
-
-
-
-</script>
