@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0; 
+    font-family: 'Ubuntu', sans-serif;
 }
 body{
     display: flex;
@@ -12,21 +13,20 @@ body{
     width: 15%;
     height: 100vh;
 }
-.container-grafico{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 500px;
-}
-h1{
-    top: 10px;
-    text-align: center;
-}
+
 .titulo{
     color: white;
     display: flex;
     justify-content: center;
 }
+
+h4{
+    margin: 25px;
+    display: flex;
+    justify-content: right;
+}
+
+
 .navbar a{
     color: white;
     display: flex;
@@ -36,11 +36,7 @@ h1{
     align-items: center;
     padding: 25px;
 }
-h4{
-    margin: 25px;
-    display: flex;
-    justify-content: right;
-}
+
 li {
     text-decoration: none;
     list-style-type: none;
@@ -48,8 +44,31 @@ li {
     cursor: pointer;
 }
 
+
+.container-grafico{
+    display: flex;
+    flex-direction: column;
+    margin: 0 25px;
+    width: 100%;
+}
+
+h1{
+    margin: 20px 0 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
 .grafico{
     display: flex;
-    margin-top: 50px;
-    padding: 15px;
+    justify-content: space-around;
+}
+
+.grafico_umidade{
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px #ffffff;
+}
+
+.grafico_temperatura{
+    border-radius: 10px;
+    box-shadow: 0 0 10px 4px #ffffff;
 }

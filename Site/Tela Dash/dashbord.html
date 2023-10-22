@@ -5,6 +5,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dashbord.css">
     <style>
         canvas {
@@ -31,17 +32,22 @@
     </div>
 
     <div class="container-grafico">
+        
         <h1>Seja bem vindo</h1>
+       
         <div class="grafico">
          <section style="width: 40vw; height: 40vh;">
-         <canvas id="dht11Umidade"></canvas>
+         <canvas class="grafico_umidade" id="dht11Umidade"></canvas>
          </section>
     
          <section style="width: 40vw; height: 40vh;">
-         <canvas id="dht11Temperatura"></canvas>
+         <canvas class="grafico_temperatura" id="dht11Temperatura"></canvas>
          </section>
         </div>
     </div>
+
+
+
         <!-- <h1>Sensor Luminosidade</h1> -->
      <section style="width: 100%; display: none">
      <canvas id="luminosidade"></canvas>
@@ -68,8 +74,8 @@
             {
              label: 'Umidade',
              type: 'line',
-             borderColor: ['rgb(0, 21, 48)'],
-             backgroundColor: ['rgb(0, 74, 173)']
+             borderColor: ['rgb(0, 0, 255)'],
+             backgroundColor: ['rgb(0, 0, 255)']
             }
             ]
             },
@@ -118,8 +124,8 @@
                  datasets: [{
                  label: "Temperatura",
                  type: 'line',
-                 borderColor: ['rgb(204, 204, 0)'],
-                 backgroundColor: ['rgb(255, 255, 153)']
+                 borderColor: ['rgb(255, 0, 0)'],
+                 backgroundColor: ['rgb(255, 0, 0)']
                 }]
                 },
                 
