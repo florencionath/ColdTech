@@ -1,0 +1,252 @@
+* {
+   margin: 0;
+   padding: 0;
+   font-family: 'Ubuntu', sans-serif;
+   border: none;
+}
+
+body {
+   background: #ececf4ee;
+}
+
+
+
+
+.header {
+   background-color: #001530;
+   width: 100%;
+   height: 100px;
+   display: fixed;
+   position: fixed;
+   box-shadow: 0 0 10px 10px #dbdadc;
+   z-index: 1000;
+   /*O z-index é uma propriedade CSS que controla a ordem de empilhamento (ou camadas) dos elementos em uma página da web*/
+}
+
+.header .card-logo {
+   width: 100%;
+   height: 0px;
+}
+
+.header .container {
+   /*Pega o container dentro do header*/
+   width: 80%;
+   height: 100%;
+   margin: 0 10%;
+   display: flex;
+   justify-content: space-between;
+   /*Mexe no eixo X*/
+   align-items: center;
+   /*Mexe no eixo y*/
+
+}
+
+.logo {
+   color: cornflowerblue;
+}
+
+.header .container li {
+   display: inline;
+   padding: 0 15px;
+}
+
+.header .container .navbar li a {
+   text-decoration: none;
+   color: white;
+}
+
+.header .container .cadastro-login li a {
+   text-decoration: none;
+   color: white;
+}
+
+.logo-cold {
+   color: #ffffff;
+}
+
+.logo-tech {
+   color: #ffffff;
+}
+
+.imagem-logo {
+   width: 100px;
+   padding: 5px;
+   display: flex;
+}
+
+.borda-cadastro {
+   /*BORDA DO LINK CADASTRE-SE*/
+   border-radius: 5px;
+   border: 1.3px white solid;
+}
+
+
+.card_flex {
+   display: flex;
+   justify-content: center;
+}
+
+.card {
+   padding-top: 25px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: none;
+   border-radius: 15px;
+   box-shadow: 0 0 10px 4px #ffffff;
+   width: 40%;
+   margin-top: 130px;
+}
+
+.titulo_cadastro {
+   display: flex;
+   justify-content: center;
+   font-size: 30px;
+   margin-bottom: 25px;
+}
+
+input,
+.botao {
+   border: 1px solid;
+   border-radius: 8px;
+   padding-left: 10px;
+   height: 40px;
+   width: 300px;
+   margin: 10px 0;
+}
+
+.botao {
+   padding: 5px;
+   cursor: pointer;
+   font-weight: bold;
+   background: #001530;
+   box-shadow: 7px 6px 4px -5px #001530;
+   color: white;
+   border: none;
+}
+
+
+
+#div_nome,
+#div_email,
+#div_senha,
+#div_confirmacao,
+#div_cnpj {
+   color: green;
+}
+
+#div_nomeErrado,
+#div_emailErrado,
+#div_senhaErrada,
+#div_confirmacaoErrada,
+#div_cnpjErrado {
+   color: red;
+}
+
+.geral {
+   width: 300px;
+   height: 300px;
+}
+
+
+
+.footer .container p {
+   text-align: center;
+   color: white;
+}
+
+.footer {
+   margin-top: 40px;
+
+
+}
+
+.container_footer {
+   background-color: #001530;
+   width: 100%;
+   height: 200px;
+   display: flex;
+   align-items: flex-end;
+
+}
+
+.info-footer {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   color: white;
+   align-items: flex-start;
+   gap: 2px;
+
+}
+
+.container_infor_footer {
+   display: flex;
+   justify-content: space-around;
+   width: 100%;
+   align-items: self-start;
+
+   margin-bottom: 50px;
+}
+
+
+
+.icones-flex {
+   display: flex;
+
+}
+
+.container .imagem-footer {
+   height: 80%;
+}
+
+.imagem-footer {
+   display: flex;
+   justify-content: space-between;
+   /* Distribui as divs uniformemente */
+   text-align: center;
+   height: 150px;
+}
+
+.imagem-footer {
+   /*.foo*/
+   margin-top: 75px;
+}
+
+
+
+.icones {
+   width: 20px; /*Defina o tamanho desejado para o ícone */
+   height: 20px;
+   background-color: white;
+   margin: 0 3px;
+   border-radius: 5px;
+   background-color: transparent;
+}
+
+.instagram {
+   content: url('../imagens/instagram.svg');
+}
+
+.facebook {
+   
+   content: url('../imagens/facebook-f.svg');
+}
+
+.youtube{
+    content: url('../imagens/youtube.svg');
+}
+
+.github{
+    content: url('../imagens/github-alt.svg');
+}
+
+.twitter{
+       content: url('../imagens/twitter-alt.svg');
+}
+
+.titles-footer{
+   text-transform: uppercase;
+   color: white;
+   margin-bottom: 10px;
+}

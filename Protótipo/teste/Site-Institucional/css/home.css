@@ -1,0 +1,590 @@
+* { /*Body já vem com especificações,ele deixa uma pequena borda*/
+    margin: 0; /*Quero que tire todos os lados*/
+    padding: 0; /*Para ficar sem margem dentro dos elementos*/
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+    height: 100%;
+
+}
+
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+::-webkit-scrollbar-track {
+    background-color:  #001530;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(189, 189, 189);
+}
+/*BARRA DE ROLAGEM DO NAVEGADOR*/
+
+.imagem-fundo{
+    background-image: url("../imagens/fundoTermolabel2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    margin-bottom: 50px;
+    /*background: linear-gradient(45deg, #0CC0DF, #9bc2f5);*/
+}
+
+.imagem-fundo p{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.header{
+    background-color: #001530;
+    width: 100%;
+    height: 100px;
+    display: fixed;
+    position: fixed;
+    box-shadow: 0 0 10px 10px  #dbdadc;
+    z-index: 1000; /*O z-index é uma propriedade CSS que controla a ordem de empilhamento (ou camadas) dos elementos em uma página da web*/
+}
+
+.header .card-logo{
+    width: 100%;
+    height: 0px;
+}
+
+.header .container{ /*Pega o container dentro do header*/
+    width: 80%;
+    height: 100%;
+    margin: 0 10%;
+    display: flex;
+    justify-content: space-between; /*Mexe no eixo X*/
+    align-items: center; /*Mexe no eixo y*/
+}
+
+.logo{
+    color: cornflowerblue;
+}
+
+.header .container li{
+    display: inline; 
+    padding: 0 15px;
+}
+
+.header .container .navbar li a{
+    text-decoration: none;
+    color: white;
+}
+
+.header .container .cadastro-login li a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo-cold{
+    color: #ffffff;
+}
+
+.logo-tech{
+    color: #ffffff;
+}
+
+.imagem-logo{
+    width: 100px;
+    padding: 5px;
+    display: flex;
+}
+
+.borda-cadastro{ /*BORDA DO LINK CADASTRE-SE*/
+    border-radius: 5px;
+    border: 1.3px white solid; 
+}
+
+h2{
+    color: #001530;
+    text-align: center;
+}
+
+p{
+    color: rgb(88, 88, 88);
+    text-align: center;
+    font-size: 25px;
+}
+
+h3{
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #00142f;
+}
+
+.sobre-nos{
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+
+.sobre-nos p{
+    margin-top: 10px;
+}
+
+.boxes{
+    margin-top: 150px;
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.box{
+    border: #004AAD solid;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px;
+    box-shadow:  0 0 10px 5px #d7d7d7;
+    border: none;
+}
+
+.box img{
+    height: 100px;
+    padding-top: 15px;
+    padding-left: 38.5%;
+}
+
+h4{
+    text-align: center;
+    color: #004AAD;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+p{
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.icon-home {
+    content: url('../imagens/home.svg'); /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    filter: hue-rotate(350deg);
+    position: absolute;
+    top: 38.5px;
+    left: 590px;
+}
+
+
+.icon-sobre {
+       content: url('../imagens/sobre.svg'); /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+       width: 20px; /*Defina o tamanho desejado para o ícone */
+       height: 20px;
+       filter: hue-rotate(350deg);
+       position: absolute;
+       top: 39.5px;
+       left: 660px;
+}
+
+.icon-contato{
+     content: url('../imagens/contato.svg'); /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+     width: 20px; /*Defina o tamanho desejado para o ícone */
+     height: 20px;
+     filter: hue-rotate(350deg);
+     position: absolute;
+     top: 39.5px;
+     left: 765px;
+
+}
+
+.icon-login {
+    content: url('../imagens/login.svg'); /* Use a propriedade content e a função url() para referenciar a imagem do ícone */
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    filter: hue-rotate(350deg);
+    position: absolute;
+    top: 39.5px;
+    right: 145px;
+}
+
+.box .img-box{
+    filter: grayscale(0%) 
+    brightness(100%)
+    sepia(10%)
+    hue-rotate(320deg);
+}
+
+
+/*SOBREPOSIÇÃO (TITULO)*/
+.title-sobreposicao .p-sobreposicao{
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: #001530;
+    top: 1690px;
+    position: absolute;
+    z-index: 15;
+    margin-left: 25%;
+    
+} /*FIM SOBREPOSIÇÃO (TITIULO)*/
+
+
+/*SOBREPOSIÇÃO DE IMAGENS*/
+.imagem-termolabel1{
+    height: 100px;
+    width: 25%;
+    z-index: 20; 
+}
+
+.imagem-termolabel2{
+    height: 100px;
+    width: 25%;
+    z-index: 500;
+}
+
+.imagem-termolabel3{
+    height: 100px;
+    width: 25%;
+    z-index: 25;
+}
+
+.sobrepor1{ /*YELLOW*/
+    width: 100%;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 275px;
+    border-radius: 5px;
+    z-index: 11;
+    margin-top: 100%;
+}
+
+.sobrepor2{ /*RED*/
+    width: 100%;
+    height: 275px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    left: 90px;
+    border-radius: 5px;
+    z-index: 12;
+}
+
+.sobrepor3{ /*BLUE*/
+    margin-top: 25%;
+    width: 25%;
+    height: 275px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   top: 1400px;
+   left: 30px;
+   border-radius: 5px;
+   z-index: 10;
+} /*FIM SOBREPOSIÇÃO DE IMAGENS*/
+
+/*MAIS INFORMAÇÕES TERMOLABEIS*/
+.termolabeis {
+    background-color: #001530;
+    width: 40%;
+    height: 440px;
+    margin-left: 50%;
+    border-radius: 10px;
+    top: 1810px; /*Pegando do começo do html*/
+    position: absolute;
+    right: 30px;
+}
+
+.medicamentos, .informacao-grafico, .title-info { /*TITULOS DOS CARDS AZUIS ESCUROS*/
+    color: white bold;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-transform: uppercase;
+    padding-top: 10px;
+    font-size: 15px;
+    margin-top: 25px;
+}
+
+.termolabeis p{
+    color: white;
+    font: 15px;
+    
+}/*FIM MAIS INFORMAÇÕES TERMOLABEIS*/
+
+
+
+/*ÁREA DE GRÁFICOS*/
+
+.graphics{
+    top: 2510px;
+    text-align: center;
+    position: absolute;
+    font-size: 20px;
+    color: #001530;
+    z-index: 20;
+    /* margin-left: 46.5%; */
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.graphics-home{
+    width: 40%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2600px;
+    right: 30px;
+    margin-left: 50%;
+    border-radius: 10px;
+}
+
+.graphics-home img{
+    width: 100%;
+    height: 500px;
+}
+
+.info-graphics{
+    background-color:  #001530;
+    width: 40%;
+    height: 440px;
+    border-radius: 10px;
+    top: 2600px; /*Pegando do começo do html*/
+    position: absolute;
+    left: 30px;
+}/*FIM ÁREA DE GRÁFICOS*/
+
+/*ÁREA SOLUÇÃO*/
+.solucao h3{
+    top: 1010px;
+    color: #001530;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+}
+.solucao img{
+    top: 3325px;
+    width: 60%;
+    right: 300px;
+    /* margin-left: 200px; */
+    position: absolute;
+    border-radius: 8px;
+}
+/*FIM ÁREA SOLUÇÃO*/
+
+
+/*MAIS INFORMAÇÕES CONTATO*/
+.mais-informacoes{
+    top: 4250px;
+    background-color: #001530;
+    width: 50%;
+    height: 550px;
+    margin-left: 50px;
+    border-radius: 10px;
+    position: absolute;
+}
+/*FIM MAIS INFORMAÇÕES CONTATO*/
+
+
+
+/*INICIO FORMULÁRIO DE CONTATO*/
+.contate-nos{
+    top: 4180px;
+    position: absolute;
+    color: #001530;
+    z-index: 20;
+    margin-left: 46.5%;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+.fieldset-contato{
+   top: 4250px;
+   width: fit-content;
+   float: right;
+   margin-right: 50px;
+   border-radius: 10px;
+   position: absolute;
+   right: 15px;
+}
+
+legend{
+    text-align: center;
+    padding: 10px;
+}
+
+.formulario{
+    float: right;
+    margin: 25px; 
+}
+
+.formulario .label-input{
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex; 
+}
+
+.formulario input{
+    border-radius: 10px;
+    border-color: #001530;
+    width: 85%;
+    padding: 10px;
+    color: #001530;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+textarea{
+    border-radius: 10px;
+    border-color: #001530;
+    width: 500px;
+    height: 250px;
+    padding: 15px;
+}
+
+button{
+    border-radius: 5px;
+    border-color: #001530;
+    color: #001530 solid bold;
+    width: 30%;
+    padding: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.button {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 20px;
+} /*FIM FORMULÁRIO DE CONTATO*/
+
+
+/*FOOTER*/
+
+.footer .container p{
+    text-align: center;
+    color: white;
+}
+
+.footer {
+    width: 100%;
+    position: absolute;
+    top: 5000px;
+}
+
+.container_footer {
+    background-color: #001530;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: flex-end;
+
+}
+ .info-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    align-items: flex-start;
+    gap: 2px;
+ }
+
+.container_infor_footer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: self-start;
+    margin-bottom: 50px;
+}
+
+.icones-flex{
+    display: flex;
+}
+
+.container .imagem-footer{
+    height: 80%;
+}
+
+.imagem-footer {
+  display: flex;
+  justify-content: space-between; /* Distribui as divs uniformemente */
+  text-align: center; 
+  height: 150px;
+}
+
+.imagem-footer { /*.foo*/
+    margin-top: 75px;
+}
+
+.icones {
+    width: 20px; /*Defina o tamanho desejado para o ícone */
+    height: 20px;
+    background-color: white;
+    margin: 0 3px;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.instagram {
+    content: url('../imagens/instagram.svg');
+}
+
+.facebook {
+    
+    content: url('../imagens/facebook-f.svg');
+}
+
+.youtube{
+     content: url('../imagens/youtube.svg');
+}
+
+.github{
+     content: url('../imagens/github-alt.svg');
+}
+
+.twitter{
+        content: url('../imagens/twitter-alt.svg');
+}
+
+.titles-footer{
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+}
+    
+span {
+    color: rgb(255, 255, 255);
+}
+
+
+/*  Padding é a margin interna do elemento
+    UL -> Lista desordenada
+    OL -> Lista ordenada
+    LI -> Itens da Lista
+
+    ATALHOS:
+    Agilidade li*3 já cria 3 intens de lista
+    CRTL ALT pra baixo agiliza digitação
+    HREF -> Referência do elemento
+*/
+
+/*
+
+CORES EM HEXADECIMAL DA LOGO
+
+#0CC0DF
+
+#004AAD
+
+#5E17EB
+
+*/
