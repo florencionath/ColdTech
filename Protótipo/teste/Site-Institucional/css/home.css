@@ -146,7 +146,7 @@ h3{
 .box img{
     height: 100px;
     padding-top: 15px;
-    padding-left: 38.5%;
+    /* padding-left: 38.5%; */
 }
 
 h4{
