@@ -9,7 +9,7 @@ div, h1 {
 
 input {
    border-radius: 10px; /*Para deixar arredondado do input*/
-   border-color: blue; /*Cor da borda do input*/
+   border-color: #001530; /*Cor da borda do input*/
    width: 310px; /*Largura do input*/
    padding: 5px;
 }
@@ -29,7 +29,7 @@ p{
 }
 
 .fieldset-calculadora{
-width: 400px;
+width: 35%;
 height: fit-content;
 background-color: white;
 border: #004AAD solid;
@@ -38,7 +38,7 @@ padding: 15px;
 margin: 15px;
 box-shadow: 0 0 10px 5px #d7d7d7;
 border: none;
-font-weight: bold;
+/* font-weight: bold; */
 position: absolute;
 top: 2570px;
 left: 900px;
@@ -48,6 +48,7 @@ left: 900px;
 
 legend {
 text-align: center;
+font-weight: bold;
 
 }
 
