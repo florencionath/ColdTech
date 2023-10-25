@@ -15,9 +15,18 @@ body{
 }
 
 .menu-lateral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #001530;
     width: 15%;
     height: 100%;
+}
+
+.img_login{
+    width: 100px;
+    height: 100px;
 }
 
 .titulo{
@@ -46,7 +55,6 @@ h4{
 li {
     text-decoration: none;
     list-style-type: none;
-    padding: 40px;
     cursor: pointer;
 }
 
