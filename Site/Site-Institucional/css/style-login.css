@@ -105,9 +105,10 @@ body{
     margin-top: 100px;
 }
 
-.titulo_login {
+.titulo_login, .titulo_recuperar_senha {
     display: flex;
     justify-content: center;
+    margin-top: 30px;
 }
 
 .container_input {
@@ -122,17 +123,20 @@ body{
 
 
 
-.ipt_senha, .ipt_email {
+.ipt_senha, .ipt_email, .ipt_codigo, .ipt_nova_senha {
     border: 1px solid;
     border-radius: 8px;
     padding-left: 10px
 }
 
-.ipt_senha, .ipt_email, .botao{
+.ipt_senha, .ipt_email, .botao, .ipt_codigo, .ipt_nova_senha{
     width: 270px;
     height: 40px;
 }
 
+.p_nova_senha{
+    padding: 10px;
+}
 
 .email, .senha {
     margin: 20px 0 10px 0;
@@ -142,7 +146,6 @@ body{
     font-size: 14px;
     margin-top: 8px;
     color: black;
-
 }
 
 .botao{
