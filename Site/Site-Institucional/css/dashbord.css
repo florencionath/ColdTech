@@ -3,15 +3,21 @@
     padding: 0; 
     font-family: 'Ubuntu', sans-serif;
 }
+
+html{
+    height: 100%;
+}
+
 body{
     display: flex;
     background-color: #ececf4ee;
+    height: 100%;
 }
 
 .menu-lateral{
     background-color: #001530;
     width: 15%;
-    height: 100vh;
+    height: 100%;
 }
 
 .titulo{
@@ -71,4 +77,57 @@ h1{
 .grafico_temperatura{
     border-radius: 10px;
     box-shadow: 0 0 10px 4px #ffffff;
+}
+
+.alerta_umidade{
+    margin-top: 10px;
+}
+
+.alerta_umidade, .alerta_temperatura{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .p_umidade, .p_temperatura{
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px 10px;
+} 
+
+.alerta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    color: white;
+    margin: 0 5px;
+    border-radius: 5px;
+}
+
+.quadrados{
+    display: flex;
+    flex-direction: row;
+}
+
+.quadrado1, .quadrado8{
+    background-color: rgb(226, 11, 11);
+}
+
+.quadrado2, .quadrado7{
+    background-color: rgb(241, 159, 8);
+}
+
+.quadrado3, .quadrado6{
+    background-color: rgb(226, 226, 16);
+}
+
+.quadrado4, .quadrado5{
+    background-color: rgb(2, 124, 2);
+}
+
+.p_registro{
+    font-weight: bold;
+    font-size: 20px;
 }
