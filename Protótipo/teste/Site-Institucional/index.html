@@ -172,6 +172,7 @@
         <span class="graphics">Desperdício</span>
 
 
+        <!--ÁREA DA CALCULADORA-->
     <fieldset class="fieldset-calculadora">
         <legend> Simulador Financeiro </legend>
             <div class="centralizar">
@@ -306,7 +307,7 @@
         var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
         
 
-        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
 
 var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
 
@@ -318,11 +319,11 @@ var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS
 
 var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
 
-var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
 
-var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
 
-var economia = reducaoTransporte + reducaoArmazenamento;
+var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
 
 div_mensagem.innerHTML = ``
 div_eles.innerHTML = ``

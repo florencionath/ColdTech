@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
     <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/calculadora.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!--FONT UBUNTU-->
@@ -169,11 +170,38 @@
 
     <div class="title-graphics" id="desperdicio"> 
         <span class="graphics">Desperdício</span>
-    </div>
+   
 
-<div class="graphics-home">
-    <img src="./imagens/graficopng.png" alt="">
-</div>
+<!--ÁREA DA CALCULADORA-->
+    <fieldset class="fieldset-calculadora">
+        <legend> Simulador Financeiro </legend>
+            <div class="calculadora">
+                
+                <p>Informe a quantidade de medicamentos</p>
+                <input type="number" id="input_qtdMedicamentos"><br><br>
+                
+                <p>Informe quanto custa cada medicamento</p>
+                <input type="number" id="input_valorUnitario"><br><br>
+                
+                <p>Informe a média de medicamentos perdidos durante o transporte</p> 
+                <input type="number" id="input_perdasTransporte"><br><br>
+                
+                <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
+                <input type="number" id="input_perdasArmazenamento"><br><br>
+            
+                <button onclick="reducao()">Simular</button><br><br>
+                <div id="div_mensagem"></div>
+        
+                    <span id="textos">
+                        
+                         <div id="div_eles"></div> 
+                         <div id="div_nossa"></div> 
+        
+                    </span>
+            </div>
+        
+        </fieldset>
+    </div>
 
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
@@ -265,3 +293,49 @@
   
 </body>
 </html>
+
+
+<script>
+
+    function reducao (){
+        var quantidadeMedicamentos = Number(input_qtdMedicamentos.value);
+        var valorUnitario = Number(input_valorUnitario.value);
+        var perdasTransporte = Number(input_perdasTransporte.value); // Porcentagem que perde ao mês com transporte
+        var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
+        
+
+var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+
+var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
+
+var sobrouTransporte = (valorTotalMedicamento - perdasMesTransporte); // sobrou X R$
+
+var perdasMesArmazenamento = (valorUnitario * perdasArmazenamento) // PERDAS DO QUE SOBROU EM R$
+
+var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO TRANSPORTE
+
+var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
+
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
+
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
+
+var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
+
+div_mensagem.innerHTML = ``
+div_eles.innerHTML = ``
+div_nossa.innerHTML = ``
+
+        div_mensagem.innerHTML += `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
+        Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
+
+
+        div_eles.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
+        // div_eles.style = 'border: 1px solid black ;'
+
+        div_nossa.innerHTML = `Com nossa solução tecnológica você economizará R$ ${economia}!` 
+        // div_nossa.style = 'border: 1px solid black;'
+
+        
+    }
+</script>
