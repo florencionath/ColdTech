@@ -1,0 +1,77 @@
+
+div, h1 {
+   text-align: center; /*Centralizando a div, dentro da div tem todo conteúdo do da calculadora*/
+   color: rgb(0, 0, 0); /*Cor do h1*/
+   border-radius: 5px;
+}
+
+
+
+input {
+   border-radius: 10px; /*Para deixar arredondado do input*/
+   border-color: #001530; /*Cor da borda do input*/
+   width: 310px; /*Largura do input*/
+   padding: 5px;
+}
+button{
+   border-radius: 10px; /*Para deixar arredondado do botão*/
+   color: black; /*Cor do texto do botão*/
+   border-color: black; /*Cor da borda do botão*/
+   cursor: pointer; /*Mãozinha do mouse quando passar em cima do botão*/
+   border: 3px solid;
+   padding: 5px;
+   width: 150px;
+   margin-top: 7px;
+}
+
+p{
+   color: black;
+}
+
+.fieldset-calculadora{
+width: 35%;
+height: fit-content;
+background-color: white;
+border: #004AAD solid;
+border-radius: 15px;
+padding: 15px;
+margin: 15px;
+box-shadow: 0 0 10px 5px #d7d7d7;
+border: none;
+/* font-weight: bold; */
+position: absolute;
+top: 2570px;
+left: 900px;
+   
+
+}
+
+legend {
+text-align: center;
+font-weight: bold;
+
+}
+
+button:hover{
+background-color: lightblue;
+}
+
+button{
+   font-weight: bold;
+}
+
+#textos{
+    display: flex;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+#div_eles, #div_nossa{
+    color: red;
+    width: 175px;
+    margin-top: 10px;
+}
+
+#div_nossa{
+    color: green;
+}
