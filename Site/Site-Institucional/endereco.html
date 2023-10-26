@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/endereco.css">
+    <!-- <script src="./js/endereco.js"></script> -->
+    <title>Endereço</title>
+</head>
+
+<body>
+
+    <div class="menu-lateral">
+
+        <div>
+            <img class="img_login" src="./assets/icone-dashboard.png" alt="imagem de um bonequinho">
+        </div>
+
+        <div class="titulo">
+            <h4>Menu</h4>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#">Endereço</a></li>
+                <li><a href="#">Transporte</a></li>
+                <li><a href="#">Armazenamento</a></li>
+                <li><a href="./login.html">Sair</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="card_flex">
+
+        <form class="form_endereco">
+    
+            <div class="titulo_endereco">
+            <h1>Cadastre seu endereço</h1>
+            </div>
+
+            <div class="container_inputs">
+                <label for="cep">CEP</label>
+                <input id="cep" type="text" required />
+            </div>
+
+            <div class="container_inputs">
+                <label for="logradouro">Logradouro</label>
+                <input id="logradouro" type="text" required />
+            </div>
+
+            <div class="container_inputs">
+                <label for="numero">Número</label>
+                <input id="numero" type="text" />
+            </div>
+
+            <div class="container_inputs">
+                <label for="complemento">Complemento</label>
+                <input id="complemento" type="text" />
+            </div>
+
+            <div class="container_inputs">
+                <label for="bairro">Bairro</label>
+                <input id="bairro" type="text" required />
+            </div>
+
+            <div class="container_opcoes">
+                <label for="uf">Estado</label>
+                <select class="select_estados" id="uf">
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                </select>
+            </div>
+
+            <!-- <button class="botao" <a href="./dashbord.html"></a>>Cadastrar</button></a> -->
+            <button onclick="analisar()" class="botao">Cadastrar</button>
+        </form>
+
+    </section>
+
+
+</body>
+
+</html>
+<script>
+    function analisar(){
+        window.location.href = `./dashbord.html`;
+    }
+</script>

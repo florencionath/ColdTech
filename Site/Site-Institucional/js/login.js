@@ -52,10 +52,3 @@ function novaSenha() {
     div_mensagem.style = "color: red"
   }
 }
-function recuperar() {
-  const codigo = ipt_codigo;
-  if(codigo.value === 1818){
-    console.log('foi')
-  }
-
-}
