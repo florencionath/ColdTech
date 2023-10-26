@@ -4,12 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
-<<<<<<< HEAD
     <link rel="stylesheet" href="./css/home2.css">
-=======
-    <link rel="stylesheet" href="./css/home.css">
     <link rel="stylesheet" href="./css/calculadora.css">
->>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!--FONT UBUNTU-->
@@ -173,7 +169,6 @@
 
     <!--ÁREA DOS GRÁFICOS-->
 
-<<<<<<< HEAD
     <div class="title-graphics" > 
         
         <span class="graphics" id="desperdicio">Desperdício</span>
@@ -212,7 +207,7 @@
 <!-- <div class="graphics-home">
     <img src="./imagens/graficopng.png" alt="">
 </div> -->
-=======
+
     <div class="title-graphics" id="desperdicio"> 
         <span class="graphics">Desperdício</span>
    
@@ -247,7 +242,6 @@
         
         </fieldset>
     </div>
->>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
@@ -347,10 +341,6 @@
 </body>
 </html>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 <script>
 
     function reducao (){
@@ -359,12 +349,6 @@
         var perdasTransporte = Number(input_perdasTransporte.value); // Porcentagem que perde ao mês com transporte
         var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
         
-
-<<<<<<< HEAD
-        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
-=======
-var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
->>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 
 var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
 
@@ -376,19 +360,18 @@ var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS
 
 var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
 
-<<<<<<< HEAD
 var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
 
 var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
 
 var economia = reducaoTransporte + reducaoArmazenamento;
-=======
+
 var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
 
 var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
 
 var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
->>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
+
 
 div_mensagem.innerHTML = ``
 div_eles.innerHTML = ``
