@@ -131,7 +131,8 @@ input,
 #div_email,
 #div_senha,
 #div_confirmacao,
-#div_cnpj {
+#div_cnpj,
+#div_telefone {
    color: green;
 }
 
@@ -139,7 +140,8 @@ input,
 #div_emailErrado,
 #div_senhaErrada,
 #div_confirmacaoErrada,
-#div_cnpjErrado {
+#div_cnpjErrado,
+#div_telefone_errado {
    color: red;
 }
 

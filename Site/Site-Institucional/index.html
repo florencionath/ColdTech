@@ -4,7 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="./css/home2.css">
+=======
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/calculadora.css">
+>>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!--FONT UBUNTU-->
@@ -168,6 +173,7 @@
 
     <!--ÁREA DOS GRÁFICOS-->
 
+<<<<<<< HEAD
     <div class="title-graphics" > 
         
         <span class="graphics" id="desperdicio">Desperdício</span>
@@ -206,6 +212,42 @@
 <!-- <div class="graphics-home">
     <img src="./imagens/graficopng.png" alt="">
 </div> -->
+=======
+    <div class="title-graphics" id="desperdicio"> 
+        <span class="graphics">Desperdício</span>
+   
+
+<!--ÁREA DA CALCULADORA-->
+    <fieldset class="fieldset-calculadora">
+        <legend> Simulador Financeiro </legend>
+            <div class="calculadora">
+                
+                <p>Informe a quantidade de medicamentos</p>
+                <input type="number" id="input_qtdMedicamentos"><br><br>
+                
+                <p>Informe quanto custa cada medicamento</p>
+                <input type="number" id="input_valorUnitario"><br><br>
+                
+                <p>Informe a média de medicamentos perdidos durante o transporte</p> 
+                <input type="number" id="input_perdasTransporte"><br><br>
+                
+                <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
+                <input type="number" id="input_perdasArmazenamento"><br><br>
+            
+                <button onclick="reducao()">Simular</button><br><br>
+                <div id="div_mensagem"></div>
+        
+                    <span id="textos">
+                        
+                         <div id="div_eles"></div> 
+                         <div id="div_nossa"></div> 
+        
+                    </span>
+            </div>
+        
+        </fieldset>
+    </div>
+>>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
@@ -305,6 +347,10 @@
 </body>
 </html>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 <script>
 
     function reducao (){
@@ -314,7 +360,11 @@
         var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
         
 
+<<<<<<< HEAD
         var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+=======
+var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+>>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 
 var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
 
@@ -326,11 +376,19 @@ var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS
 
 var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
 
+<<<<<<< HEAD
 var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
 
 var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
 
 var economia = reducaoTransporte + reducaoArmazenamento;
+=======
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
+
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
+
+var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
+>>>>>>> 55abd8f2b8cba6da7a8b6d301f5b49c54b5e7d6d
 
 div_mensagem.innerHTML = ``
 div_eles.innerHTML = ``
