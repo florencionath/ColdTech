@@ -4,6 +4,7 @@ div_emailErrado.innerHTML = `Informe um e-mail válido`;
 div_senhaErrada.innerHTML = `A senha deve conter mais de 8 caracteres <br> e pelo menos um caracter especial`;
 div_confirmacaoErrada.innerHTML = `Digite a senha novamente`;
 div_cnpjErrado.innerHTML = `Informe um CNPJ válido`;
+div_telefone_errado.innerHTML = 'Informe um telefone válido'
 
 
 function Exibir(){
@@ -12,6 +13,7 @@ function Exibir(){
     var cnpj = input_cnpj.value;
     var senha = input_senha.value;
     var confirmacao = input_confirmacao.value;
+    var telefone = Number(input_telefone.value);
 
 // DIV's sem texto para limpar após executar a function
 
@@ -20,6 +22,8 @@ function Exibir(){
     div_senha.innerHTML = ``;
     div_confirmacao.innerHTML = ``;
     div_cnpj.innerHTML = ``;
+    div_telefone.innerHTML = '';
+    
     
 
     div_nomeErrado.innerHTML = ``;
@@ -27,6 +31,7 @@ function Exibir(){
     div_senhaErrada.innerHTML = ``;
     div_confirmacaoErrada.innerHTML = ``;
     div_cnpjErrado.innerHTML = ``;
+    div_telefone_errado.innerHTML = '';
     
 
 
@@ -52,6 +57,12 @@ function Exibir(){
         div_cnpj.innerHTML = `CNPJ Válido <br>`    
         } else {
         div_cnpjErrado.innerHTML = `Informe um CNPJ válido`    
+        }
+
+        if (telefone.length == 11){
+            div_telefone.innerHTML = 'Telefone válido'
+        } else {
+            div_telefone_errado.innerHTML = 'Informe um telefone válido'
         }
     
             
