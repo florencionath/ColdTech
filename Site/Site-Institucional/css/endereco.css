@@ -118,3 +118,12 @@ input, .botao{
     text-decoration: none;
     color: #ffffff;
 }
+
+.ativo > a {
+    font-weight: bold;
+    color: black;
+}
+.ativo {
+    background-color: white;
+    border-radius: 8%;
+}
