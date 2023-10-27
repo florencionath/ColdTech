@@ -4,7 +4,8 @@ div_emailErrado.innerHTML = `Informe um e-mail válido`;
 div_senhaErrada.innerHTML = `A senha deve conter mais de 8 caracteres <br> e pelo menos um caracter especial`;
 div_confirmacaoErrada.innerHTML = `Digite a senha novamente`;
 div_cnpjErrado.innerHTML = `Informe um CNPJ válido`;
-div_telefone_errado.innerHTML = 'Informe um telefone válido'
+div_telefone_errado.innerHTML = 'Informe um telefone válido';
+permiteCadastro = false;
 
 
 function Exibir() {
@@ -82,7 +83,15 @@ function Exibir() {
 
 
     if (confirmacao == senha && confirmacao.length >= 8) {
-        div_confirmacao.innerHTML = `Confirmacao válida! <br>`
+        div_confirmacao.innerHTML = `Confirmacao válida! <br>`;
+        permiteCadastro = true;
+
     } else { div_confirmacaoErrada.innerHTML = `A confirmação deve ser identica a senha! <br>` }
 
-}           
+}          
+
+function cadastrar() {
+    if(permiteCadastro){
+        window.location.href = `./login.html`
+    }
+}

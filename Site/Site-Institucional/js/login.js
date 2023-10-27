@@ -39,7 +39,9 @@ function novaSenha() {
                 <p class="p_nova_senha"> Digite o código enviado ao e-mail <span id="ipt_email_recupera"> </span> </p>
                     <input class="ipt_codigo" id="ipt_codigo" type="number" placeholder="0000"><br>
                     <p class="p_nova_senha"> Digite a nova senha</p>
-                    <input class="ipt_nova_senha" type="password" placeholder="xxxxxxxx">
+                    <input class="ipt_nova_senha"id="ipt_nova_senha" type="password" placeholder="xxxxxxxx">
+                    <p class="p_nova_senha"> Confirme nova senha</p>
+                    <input class="ipt_nova_senha"id="ipt_nova_senha_confirma" type="password" placeholder="xxxxxxxx">
                 </div>
 
                 <button class="botao" onclick="recuperar()">Recuperar</button><br>
@@ -50,5 +52,47 @@ function novaSenha() {
   } else {
     div_mensagem.innerHTML = `Insira o e-mail cadastrado`
     div_mensagem.style = "color: red"
+  }
+}
+
+function recuperar() {
+  var codigo = ipt_codigo.value;
+  var novaSenha = ipt_nova_senha.value;
+  var novaSenhaConfirma = ipt_nova_senha_confirma.value;
+
+  validaSenha = false;
+  validaCombinacao = false;
+
+ 
+
+  if(codigo != 1234){
+    console.log(codigo)
+    div_mensagem.innerHTML = `Codigo incorreto`;
+    div_mensagem.style = "color: red"
+  }
+  if (novaSenha.length >= 8 &&
+    (novaSenha.indexOf('#') >= 0
+      || novaSenha.indexOf('!') >= 0
+      || novaSenha.indexOf('@') >= 0
+      || novaSenha.indexOf('$') >= 0
+      || novaSenha.indexOf('%') >= 0
+      || novaSenha.indexOf('&') >= 0
+      || novaSenha.indexOf('*') >= 0)
+  ) {
+    validaSenha = true;
+  } else {
+    div_mensagem.innerHTML = `Sua senha deve possuir ao menos 8 caracteres <br> e pelo menos um caracter especial! <br>`;
+    div_mensagem.style = "color: red"
+
+  }
+
+
+  if (novaSenhaConfirma == novaSenha && novaSenhaConfirma.length >= 8) {
+    validaCombinacao = true;
+  } else { div_mensagem.innerHTML = `A confirmação deve ser identica a senha! <br>`;div_mensagem.style = "color: red"}
+
+  if (codigo == 1234 && validaSenha && validaCombinacao) {
+    console.log('entrou')
+    window.location.href = `./login.html`;
   }
 }
