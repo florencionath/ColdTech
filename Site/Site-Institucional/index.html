@@ -20,6 +20,7 @@
             <!-- <div class="card-logo">
                 <img class="imagem-logo" src="./assets/logoPng.png">
             </div> -->
+            
             <div class="container"> <!--DIV CONTAINER-->
                 <!-- <h1 class="logo-cold">Cold<span class="logo-tech">Tech</span></h1> -->
                 <img class="imagem-logo" src="./assets/logoPng.png">
@@ -174,21 +175,31 @@
         <span class="graphics" id="desperdicio">Desperdício</span>
 
 
-    <fieldset class="fieldset-calculadora">
-        <legend> Simulador Financeiro </legend>
+    <!-- <fieldset class="fieldset-calculadora">
+        <h4>
+            Simulador Financeiro
+        </h4>
             <div class="centralizar">
                 
+                <div>
                 <p>Informe a quantidade de medicamentos</p>
-                <input type="number" id="input_qtdMedicamentos"><br><br>
+                <input type="number" id="input_qtdMedicamentos">
+                </div>
                 
+                <div>
                 <p>Informe quanto custa cada medicamento</p>
-                <input type="number" id="input_valorUnitario"><br><br>
+                <input type="number" id="input_valorUnitario">
+                </div>
                 
+                <div>
                 <p>Informe a média de medicamentos perdidos durante o transporte</p> 
-                <input type="number" id="input_perdasTransporte"><br><br>
+                <input type="number" id="input_perdasTransporte">
+                </div>
                 
+                <div>
                 <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
                 <input type="number" id="input_perdasArmazenamento"><br><br>
+                </div>
             
                 <button onclick="reducao()">Simular</button><br><br>
                 <div id="div_mensagem"></div>
@@ -201,7 +212,7 @@
                     </span>
             </div>
         
-        </fieldset>
+        </fieldset> -->
     </div>
 
 <!-- <div class="graphics-home">
@@ -214,20 +225,25 @@
 
 <!--ÁREA DA CALCULADORA-->
 <fieldset class="fieldset-calculadora">
-    <legend> Simulador Financeiro </legend>
+     <h4>
+            Simulador Financeiro
+        </h4>
         <div class="centralizar">
+            <div class="inputs_container">
+                <p>Informe a quantidade de medicamentos</p>
+                <input type="number" id="input_qtdMedicamentos1">
+                
+                <p>Informe quanto custa cada medicamento</p>
+                <input type="number" id="input_valorUnitario2">
+                
+                <p>Informe a média de medicamentos <br>perdidos durante o transporte</p> 
+                <input type="number" id="input_perdasTransporte3">
+                
+                <p>Informe a média de medicamentos <br> perdidos durante o armazenamento</p>
+                <input type="number" id="input_perdasArmazenamento4">
+
+            </div>
             
-            <p>Informe a quantidade de medicamentos</p>
-            <input type="number" id="input_qtdMedicamentos1"><br><br>
-            
-            <p>Informe quanto custa cada medicamento</p>
-            <input type="number" id="input_valorUnitario2"><br><br>
-            
-            <p>Informe a média de medicamentos perdidos durante o transporte</p> 
-            <input type="number" id="input_perdasTransporte3"><br><br>
-            
-            <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
-            <input type="number" id="input_perdasArmazenamento4"><br><br>
         
             <button onclick="reducao()">Simular</button><br><br>
             <div id="div_textoMensagem"></div>
@@ -369,11 +385,9 @@ var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
 var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
 
 div_textoMensagem.innerHTML = ``
-div_eles.innerHTML = ``
-div_nossa.innerHTML = ``
 
-    div_textoMensagem.innerHTML += `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
-        Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
+    div_textoMensagem.innerHTML += `<b div style = "color: black;"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} <br> sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
+        <br>Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
 
 
         div_sem.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
