@@ -30,8 +30,9 @@
         </div>
         <div class="navbar">
     <ul>
-        <li><a href="#">Transporte</a></li>
-        <li><a href="#">Armazenamento</a></li>
+        <li id="li_endereco" class="li_endereco"><a href="./endereco.html">Endereço</a></li>
+        <li class="li_transporte"><a href="#">Transporte</a></li>
+        <li class="li_armazenamento ativo"><a href="./dashbord.html">Armazenamento</a></li>
         <li><a href="./login.html">Sair</a></li>
     </ul>
         </div>
@@ -40,6 +41,8 @@
     <div class="container-grafico">
        
         <h1>Seja bem vindo</h1>
+        
+        <h2>Armazenamento</h2>
         
         <div class="grafico">
          <section style="width: 40vw; height: 40vh;">
@@ -376,3 +379,10 @@
         </script>
 </body>
 </html>
+
+<script>
+    function negrito(id){
+      var linkAtivo = id;
+      linkAtivo.style = 'color: red'
+    }
+</script>

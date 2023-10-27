@@ -1,0 +1,127 @@
+body {
+   background: #ececf4ee;
+}
+
+div,
+h1 {
+   text-align: center;
+   /*Centralizando a div, dentro da div tem todo conteúdo do da calculadora*/
+   color: rgb(0, 0, 0);
+   /*Cor do h1*/
+   border-radius: 5px;
+}
+
+
+
+input {
+   border-radius: 10px;
+   /*Para deixar arredondado do input*/
+   border-color: #001530;
+   /*Cor da borda do input*/
+   width: 310px;
+   /*Largura do input*/
+   padding: 5px;
+}
+
+button {
+   border-radius: 10px;
+   /*Para deixar arredondado do botão*/
+   color: black;
+   /*Cor do texto do botão*/
+   border-color: black;
+   /*Cor da borda do botão*/
+   cursor: pointer;
+   /*Mãozinha do mouse quando passar em cima do botão*/
+   border: 3px solid;
+   padding: 5px;
+   width: 150px;
+   margin-top: 7px;
+}
+
+p {
+   color: black;
+}
+
+.fieldset-calculadora {
+   width: 35%;
+   height: fit-content;
+   background-color: #ececf4ee;
+   padding: 15px;
+   margin: 15px;
+   box-shadow: 0 0 10px 4px #ffffff;
+   border-radius: 15px;
+   border: 1px solid #001530;
+   position: absolute;
+   top: 2540px;
+   left: 900px;
+}
+
+.fieldset-calculadora>h4 {
+   color: black;
+   font-size: 24px;
+   margin-bottom: 10px;
+}
+
+.inputs_container>input {
+   border: 1px solid;
+   border-radius: 8px;
+   padding-left: 10px;
+   width: 270px;
+   height: 30px;
+}
+
+.inputs_container>p {
+   font-size: 14px;
+   margin-bottom: 5px;
+   text-align: start;
+}
+
+.inputs_container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 5px;
+}
+
+.centralizar>button {
+   padding: 10px;
+   cursor: pointer;
+   border-radius: 5px;
+   font-weight: bold;
+   background: #001530;
+   box-shadow: 7px 6px 4px -5px #001530;
+   border: #001530;
+   color: white;
+}
+
+legend {
+   text-align: center;
+   font-weight: bold;
+
+}
+
+button:hover {
+   background-color: lightblue;
+}
+
+button {
+   font-weight: bold;
+}
+
+#textos {
+   display: flex;
+   justify-content: space-between;
+   font-weight: bold;
+   align-items: center;
+}
+
+#div_com,
+#div_sem {
+   color: red;
+   width: 40%;
+   margin-top: 10px;
+}
+
+#div_com {
+   color: green;
+}

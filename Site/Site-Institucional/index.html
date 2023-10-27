@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
-    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./css/home2.css">
+    <!-- <link rel="stylesheet" href="./css/calculadora.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!--FONT UBUNTU-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/calculadora2_estilização.css">
 </head>
 <body>
 
@@ -18,6 +20,7 @@
             <!-- <div class="card-logo">
                 <img class="imagem-logo" src="./assets/logoPng.png">
             </div> -->
+            
             <div class="container"> <!--DIV CONTAINER-->
                 <!-- <h1 class="logo-cold">Cold<span class="logo-tech">Tech</span></h1> -->
                 <img class="imagem-logo" src="./assets/logoPng.png">
@@ -38,7 +41,7 @@
 
                         <li class="termo">
                             <a href="./index.html#termolabeis">
-                                Termolabeis
+                                Termolábeis
                             </a>
                         </li>
 
@@ -104,17 +107,17 @@
                 <div class="box">
                     <img src="./imagens/rocket.svg" alt="" class="img-box">
                     <h4>Missão</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                    <p>Criar um sistema de monitoramento que reduza a perda de medicamentos durante o transporte e armazenamento!</p>
                 </div>
                     <div class="box">
                         <img src="./imagens/focus.svg" alt="" class="img-box">
                         <h4>Visão</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                        <p>Impactar a saúde da população através de um sistema de monitoramento de temperatura e umidade que permita uma melhor distribuição de medicamentos de alta qualidade!</p>
                     </div>
                         <div class="box">
                             <img src="./imagens/diamond.svg" alt="" class="img-box">
                             <h4>Valores</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                            <p>Ética, inovação e comprometimento!</p>
                         </div>
              </div>
         </div>
@@ -167,16 +170,101 @@
 
     <!--ÁREA DOS GRÁFICOS-->
 
-    <div class="title-graphics" id="desperdicio"> 
-        <span class="graphics">Desperdício</span>
+    <div class="title-graphics" > 
+        
+        <span class="graphics" id="desperdicio">Desperdício</span>
+
+
+    <!-- <fieldset class="fieldset-calculadora">
+        <h4>
+            Simulador Financeiro
+        </h4>
+            <div class="centralizar">
+                
+                <div>
+                <p>Informe a quantidade de medicamentos</p>
+                <input type="number" id="input_qtdMedicamentos">
+                </div>
+                
+                <div>
+                <p>Informe quanto custa cada medicamento</p>
+                <input type="number" id="input_valorUnitario">
+                </div>
+                
+                <div>
+                <p>Informe a média de medicamentos perdidos durante o transporte</p> 
+                <input type="number" id="input_perdasTransporte">
+                </div>
+                
+                <div>
+                <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
+                <input type="number" id="input_perdasArmazenamento"><br><br>
+                </div>
+            
+                <button onclick="reducao()">Simular</button><br><br>
+                <div id="div_mensagem"></div>
+        
+                    <span id="textos">
+                        
+                         <div id="div_eles"></div> 
+                         <div id="div_nossa"></div> 
+        
+                    </span>
+            </div>
+        
+        </fieldset> -->
     </div>
 
-<div class="graphics-home">
+<!-- <div class="graphics-home">
     <img src="./imagens/graficopng.png" alt="">
+</div> -->
+
+    <div class="title-graphics" id="desperdicio"> 
+        <span class="graphics">Desperdício</span>
+   
+
+<!--ÁREA DA CALCULADORA-->
+<fieldset class="fieldset-calculadora">
+     <h4>
+            Simulador Financeiro
+        </h4>
+        <div class="centralizar">
+            <div class="inputs_container">
+                <p>Informe a quantidade de medicamentos</p>
+                <input type="number" id="input_qtdMedicamentos1">
+                
+                <p>Informe quanto custa cada medicamento</p>
+                <input type="number" id="input_valorUnitario2">
+                
+                <p>Informe a média de medicamentos <br>perdidos durante o transporte</p> 
+                <input type="number" id="input_perdasTransporte3">
+                
+                <p>Informe a média de medicamentos <br> perdidos durante o armazenamento</p>
+                <input type="number" id="input_perdasArmazenamento4">
+
+            </div>
+            
+        
+            <button onclick="reducao()">Simular</button><br><br>
+            <div id="div_textoMensagem"></div>
+    
+                <span id="textos">
+                    
+                     <div id="div_sem"></div> 
+                     <div id="div_com"></div> 
+    
+                </span>
+        </div>
+    
+    </fieldset>
 </div>
 
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
+    <p> Quando falamos de medicamentos termolábeis, falamos de algo extremamente sensível a mudanças externas, principalmente no que tange a temperatura e umidade. Essa categoria de medicamentos deve ser conservada em uma temperatura entre 2ºC e 8ºC e umidade entre 40% e 70%, quaisquer variações fora desses valores pode diminuir a efetividade do medicamento ou até mesmo torná-lo totalmente inútil.
+        Levando em conta essas informações, a ColdTech utiliza de um sistema de sensores para reduzir em até 50% a perca durante o transporte e até 20% durante o armazenamento.
+        Faça uma simulação para comprovar a economia!
+         </p>
 </div>
     <!--FIM ÁREA DOS GRÁFICOS-->
 
@@ -184,24 +272,24 @@
 <!--ÁREA DA SOLUÇÃO-->
 <div class="solucao">
     <h3 id="solucao">SOLUÇÃO</h3>
-    <img src="./imagens/trabalhoPrancheta 1Prancheta 1.jpg" alt="">
+    <img src="./imagens/Diagrama de Solução v5 (Final Sprint 2).png" alt="">
 </div>
 <!--FIM ÁREA DA SOLUÇÃO-->
 
     
     <!--AREA DO FORMULÁRIO-->
     <span class="contate-nos" id="contato">Contate-nos</span>
-<fieldset>
+<fieldset class="fieldset-contato">
     <legend>Contato</legend>
     <div class="formulario">
             <form action="" method="">
+                <label for="nome">Nome:</label>
                 <div class="label-input">
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" maxlength="40">
                 </div>
+                <input type="text" id="nome" maxlength="40" placeholder="Insira seu nome"> 
 
+                <label for="email">E-mail:</label>
                 <div  class="label-input">
-                    <label for="email">E-mail:</label>
                     <input type="text" id="email" maxlength="40" placeholder="exemplo@gmail.com">
                 </div>
 
@@ -221,7 +309,10 @@
 
     <!--ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
     <div class="mais-informacoes" id="mais-informacoes">
-        <span class="title-info">Mais informações</span>
+        <span class="title-info">A Equipe</span>
+        <div class="imgTeam"> <img src="./imagens/imgTime.jpeg"> 
+        <p> A ColdTech foi criada em 2023 com o objetivo de usar da tecnologia como uma ferramenta para redução da perda de medicamentos durante o transporte e o armazenamento! </p>
+        </div>
     </div>
       <!--FIM ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
 
@@ -265,3 +356,48 @@
   
 </body>
 </html>
+
+<script>
+
+function reducao (){
+        var quantidadeMedicamentos = Number(input_qtdMedicamentos1.value);
+        var valorUnitario = Number(input_valorUnitario2.value);
+        var perdasTransporte = Number(input_perdasTransporte3.value); // Porcentagem que perde ao mês com transporte
+        var perdasArmazenamento = Number(input_perdasArmazenamento4.value); // Porcentagem que perde ao mês com armazenamento
+        
+
+var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+
+var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
+
+var sobrouTransporte = (valorTotalMedicamento - perdasMesTransporte); // sobrou X R$
+
+var perdasMesArmazenamento = (valorUnitario * perdasArmazenamento) // PERDAS DO QUE SOBROU EM R$
+
+var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO TRANSPORTE
+
+var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
+
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
+
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
+
+var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
+
+div_textoMensagem.innerHTML = ``
+
+    div_textoMensagem.innerHTML += `<b div style = "color: black;"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} <br> sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
+        <br>Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
+
+
+        div_sem.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
+        
+
+        div_com.innerHTML = `Com nossa solução tecnológica você economizará R$ ${economia}!` 
+        
+
+        
+
+        
+    }
+</script>

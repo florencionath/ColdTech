@@ -39,7 +39,7 @@
 
                         <li class="termo">
                             <a href="./index.html#termolabeis">
-                                Termolabeis
+                                Termolábeis
                             </a>
                         </li>
 
@@ -105,17 +105,17 @@
                 <div class="box">
                     <img src="./imagens/rocket.svg" alt="" class="img-box">
                     <h4>Missão</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                    <p>Criar um sistema de monitoramento que reduza a perda de medicamentos durante o transporte e armazenamento!</p>
                 </div>
                     <div class="box">
                         <img src="./imagens/focus.svg" alt="" class="img-box">
                         <h4>Visão</h4>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                        <p>Impactar a saúde da população através de um sistema de monitoramento de temperatura e umidade que permita uma melhor distribuição de medicamentos de alta qualidade!</p>
                     </div>
                         <div class="box">
                             <img src="./imagens/diamond.svg" alt="" class="img-box">
                             <h4>Valores</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam reiciendis repudiandae. Saepe ullam consectetur excepturi sint odit eum dolore error ad cupiditate eveniet culpa ducimus repudiandae iusto, quam voluptates!</p>
+                            <p>Ética, inovação e comprometimento!</p>
                         </div>
              </div>
         </div>
@@ -168,11 +168,11 @@
 
     <!--ÁREA DOS GRÁFICOS-->
 
-    <div class="title-graphics" id="desperdicio"> 
-        <span class="graphics">Desperdício</span>
+    <div class="title-graphics" > 
+        
+        <span class="graphics" id="desperdicio">Desperdício</span>
 
 
-        <!--ÁREA DA CALCULADORA-->
     <fieldset class="fieldset-calculadora">
         <legend> Simulador Financeiro </legend>
             <div class="centralizar">
@@ -209,6 +209,10 @@
 
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
+    <p> Quando falamos de medicamentos termolábeis, falamos de algo extremamente sensível a mudanças externas, principalmente no que tange a temperatura e umidade. Essa categoria de medicamentos deve ser conservada em uma temperatura entre 2ºC e 8ºC e umidade entre 40% e 70%, quaisquer variações fora desses valores pode diminuir a efetividade do medicamento ou até mesmo torná-lo totalmente inútil.
+        Levando em conta essas informações, a ColdTech utiliza de um sistema de sensores para reduzir em até 50% a perca durante o transporte e até 20% durante o armazenamento.
+        Faça uma simulação para comprovar a economia!
+         </p>
 </div>
     <!--FIM ÁREA DOS GRÁFICOS-->
 
@@ -254,6 +258,9 @@
     <!--ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
     <div class="mais-informacoes" id="mais-informacoes">
         <span class="title-info">Mais informações</span>
+        <div class="imgTeam"> <img src="imgTime.jpeg"> 
+        <p> A ColdTech foi criada em 2023 com o objetivo de usar da tecnologia como uma ferramenta para redução da perda de medicamentos durante o transporte e o armazenamento! </p>
+        </div>
     </div>
       <!--FIM ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
 
@@ -303,18 +310,11 @@
     function reducao (){
         var quantidadeMedicamentos = Number(input_qtdMedicamentos.value);
         var valorUnitario = Number(input_valorUnitario.value);
-        var perdasTransporte = Number(input_perdasTransporte.value); 
-        // Porcentagem que perde ao mês com transporte
-        var perdasArmazenamento = Number(input_perdasArmazenamento.value); 
-        // Porcentagem que perde ao mês com armazenamento
+        var perdasTransporte = Number(input_perdasTransporte.value); // Porcentagem que perde ao mês com transporte
+        var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
         
 
-<<<<<<< HEAD
-        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; 
-        // VALOR TOTAL DE MEDICAMENTOS R$
-=======
-var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
->>>>>>> 9f214c10ae9378ce5af114d3f363d3ef99e22833
+        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
 
 var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
 
@@ -326,11 +326,13 @@ var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS
 
 var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
 
-var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
+var porcentagemTransporte = ;
 
-var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
 
-var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
+
+var economia = reducaoTransporte + reducaoArmazenamento;
 
 div_mensagem.innerHTML = ``
 div_eles.innerHTML = ``
@@ -339,7 +341,8 @@ div_nossa.innerHTML = ``
         div_mensagem.innerHTML += `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
         Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
 
-        div_eles.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.`
+
+        div_eles.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
         // div_eles.style = 'border: 1px solid black ;'
 
         div_nossa.innerHTML = `Com nossa solução tecnológica você economizará R$ ${economia}!` 
