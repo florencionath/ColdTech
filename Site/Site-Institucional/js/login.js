@@ -52,3 +52,7 @@ function novaSenha() {
     div_mensagem.style = "color: red"
   }
 }
+
+function recuperar() {
+  window.location.href = './login.html';
+}
