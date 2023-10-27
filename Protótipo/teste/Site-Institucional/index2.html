@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ColdTech</title>
-    <link rel="stylesheet" href="./css/home2.css">
-    <!-- <link rel="stylesheet" href="./css/calculadora.css"> -->
+    <link rel="stylesheet" href="./css/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
     <!--FONT UBUNTU-->
@@ -208,41 +207,6 @@
     <img src="./imagens/graficopng.png" alt="">
 </div> -->
 
-    <div class="title-graphics" id="desperdicio"> 
-        <span class="graphics">Desperdício</span>
-   
-
-<!--ÁREA DA CALCULADORA-->
-<fieldset class="fieldset-calculadora">
-    <legend> Simulador Financeiro </legend>
-        <div class="centralizar">
-            
-            <p>Informe a quantidade de medicamentos</p>
-            <input type="number" id="input_qtdMedicamentos1"><br><br>
-            
-            <p>Informe quanto custa cada medicamento</p>
-            <input type="number" id="input_valorUnitario2"><br><br>
-            
-            <p>Informe a média de medicamentos perdidos durante o transporte</p> 
-            <input type="number" id="input_perdasTransporte3"><br><br>
-            
-            <p>Informe a média de medicamentos perdidos durante o armazenamento</p>
-            <input type="number" id="input_perdasArmazenamento4"><br><br>
-        
-            <button onclick="reducao()">Simular</button><br><br>
-            <div id="div_textoMensagem"></div>
-    
-                <span id="textos">
-                    
-                     <div id="div_sem"></div> 
-                     <div id="div_com"></div> 
-    
-                </span>
-        </div>
-    
-    </fieldset>
-</div>
-
 <div class="info-graphics">
     <span class="informacao-grafico">Informações</span>
     <p> Quando falamos de medicamentos termolábeis, falamos de algo extremamente sensível a mudanças externas, principalmente no que tange a temperatura e umidade. Essa categoria de medicamentos deve ser conservada em uma temperatura entre 2ºC e 8ºC e umidade entre 40% e 70%, quaisquer variações fora desses valores pode diminuir a efetividade do medicamento ou até mesmo torná-lo totalmente inútil.
@@ -256,7 +220,7 @@
 <!--ÁREA DA SOLUÇÃO-->
 <div class="solucao">
     <h3 id="solucao">SOLUÇÃO</h3>
-    <img src="./imagens/Diagrama de Solução v5 (Final Sprint 2).png" alt="">
+    <img src="./imagens/trabalhoPrancheta 1Prancheta 1.jpg" alt="">
 </div>
 <!--FIM ÁREA DA SOLUÇÃO-->
 
@@ -267,13 +231,13 @@
     <legend>Contato</legend>
     <div class="formulario">
             <form action="" method="">
-                <label for="nome">Nome:</label>
                 <div class="label-input">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" maxlength="40">
                 </div>
-                <input type="text" id="nome" maxlength="40" placeholder="Insira seu nome"> 
 
-                <label for="email">E-mail:</label>
                 <div  class="label-input">
+                    <label for="email">E-mail:</label>
                     <input type="text" id="email" maxlength="40" placeholder="exemplo@gmail.com">
                 </div>
 
@@ -293,8 +257,8 @@
 
     <!--ÁREA DE MAIS INFORMAÇÕES ÁREA DE CONTATO-->
     <div class="mais-informacoes" id="mais-informacoes">
-        <span class="title-info">A Equipe</span>
-        <div class="imgTeam"> <img src="./imagens/imgTime.jpeg"> 
+        <span class="title-info">Mais informações</span>
+        <div class="imgTeam"> <img src="imgTime.jpeg"> 
         <p> A ColdTech foi criada em 2023 com o objetivo de usar da tecnologia como uma ferramenta para redução da perda de medicamentos durante o transporte e o armazenamento! </p>
         </div>
     </div>
@@ -343,14 +307,14 @@
 
 <script>
 
-function reducao (){
-        var quantidadeMedicamentos = Number(input_qtdMedicamentos1.value);
-        var valorUnitario = Number(input_valorUnitario2.value);
-        var perdasTransporte = Number(input_perdasTransporte3.value); // Porcentagem que perde ao mês com transporte
-        var perdasArmazenamento = Number(input_perdasArmazenamento4.value); // Porcentagem que perde ao mês com armazenamento
+    function reducao (){
+        var quantidadeMedicamentos = Number(input_qtdMedicamentos.value);
+        var valorUnitario = Number(input_valorUnitario.value);
+        var perdasTransporte = Number(input_perdasTransporte.value); // Porcentagem que perde ao mês com transporte
+        var perdasArmazenamento = Number(input_perdasArmazenamento.value); // Porcentagem que perde ao mês com armazenamento
         
 
-var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
+        var valorTotalMedicamento = quantidadeMedicamentos * valorUnitario; // VALOR TOTAL DE MEDICAMENTOS R$
 
 var perdasMesTransporte = (valorUnitario * perdasTransporte); // PERDAS EM R$ 
 
@@ -362,27 +326,27 @@ var reducaoTransporte = (perdasMesTransporte * 50) / 100; // % QUE ESTABELECEMOS
 
 var reducaoArmazenamento = (perdasMesArmazenamento * 20) / 100; // % QUE ESTABELECEMOS PARA REDUÇÃO NO ARMAZENAMENTO
 
-var reducaoTotal = reducaoTransporte + reducaoArmazenamento; //Em R$ (não está usando)
+var porcentagemTransporte = ;
 
-var perdasTotais = perdasMesTransporte + perdasMesArmazenamento; // Em R$
+var reducaoTotal = reducaoTransporte + reducaoArmazenamento;
 
-var economia = reducaoTransporte + reducaoArmazenamento; // Em R$
+var perdasTotais = perdasMesTransporte + perdasMesArmazenamento;
 
-div_textoMensagem.innerHTML = ``
+var economia = reducaoTransporte + reducaoArmazenamento;
+
+div_mensagem.innerHTML = ``
 div_eles.innerHTML = ``
 div_nossa.innerHTML = ``
 
-    div_textoMensagem.innerHTML += `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
+        div_mensagem.innerHTML += `<b div style = "color: black"> ${quantidadeMedicamentos} medicamentos custam R$ ${valorTotalMedicamento} sendo que cada unidade equivale a R$ ${valorUnitario}. <br> 
         Dos R$ ${valorTotalMedicamento} você perde R$ ${perdasMesTransporte} no transporte  e R$ ${perdasMesArmazenamento} durante o armazenamento`
 
 
-        div_sem.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
-        
+        div_eles.innerHTML = `Sem nosso serviço você perde ao todo R$ ${perdasTotais} durante o transporte e armazenamento.` 
+        // div_eles.style = 'border: 1px solid black ;'
 
-        div_com.innerHTML = `Com nossa solução tecnológica você economizará R$ ${economia}!` 
-        
-
-        
+        div_nossa.innerHTML = `Com nossa solução tecnológica você economizará R$ ${economia}!` 
+        // div_nossa.style = 'border: 1px solid black;'
 
         
     }

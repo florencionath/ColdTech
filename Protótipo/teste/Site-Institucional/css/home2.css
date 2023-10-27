@@ -2,6 +2,7 @@
     margin: 0; /*Quero que tire todos os lados*/
     padding: 0; /*Para ficar sem margem dentro dos elementos*/
     font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
 }
 
 html, body {
@@ -31,6 +32,7 @@ html, body {
     justify-content: center;   
     margin-bottom: 50px;
     /*background: linear-gradient(45deg, #0CC0DF, #9bc2f5);*/
+
 }
 
 .imagem-fundo p{
@@ -141,6 +143,7 @@ h3{
     margin: 15px;
     box-shadow:  0 0 10px 5px #d7d7d7;
     border: none;
+    width: 33.3%;
 }
 
 .box img{
@@ -218,10 +221,11 @@ p{
     align-items: center;
     display: flex;
     color: #001530;
-    top: 1690px;
+    top: 1600px;
     position: absolute;
     z-index: 15;
     margin-left: 25%;
+    font-size: 20px;
     
 } /*FIM SOBREPOSIÇÃO (TITIULO)*/
 
@@ -279,7 +283,7 @@ p{
    justify-content: center;
    align-items: center;
    position: absolute;
-   top: 1400px;
+   top: 1350px;
    left: 30px;
    border-radius: 5px;
    z-index: 10;
@@ -297,6 +301,20 @@ p{
     right: 30px;
 }
 
+.imgTeam img{
+    width:90%;
+    height: 350px;
+    padding: 20px;
+    border-radius: 25px;
+    /* box-shadow: 0 0 5px 5px  black; */
+    margin-top: 10px;
+}
+
+.imgTeam p {
+    color: white;
+    margin-top: 10px;
+}
+
 .medicamentos, .informacao-grafico, .title-info { /*TITULOS DOS CARDS AZUIS ESCUROS*/
     color: white bold;
     justify-content: center;
@@ -305,7 +323,15 @@ p{
     text-transform: uppercase;
     padding-top: 10px;
     font-size: 15px;
-    margin-top: 25px;
+    margin-top: 22px;
+    font-weight: bold;
+}
+
+.info-graphics p {
+    /* margin-top: 20px; */
+    padding: 20px;
+    padding-top: 40px;
+    color: white;
 }
 
 .termolabeis p{
@@ -368,6 +394,7 @@ p{
     align-items: center;
     justify-content: center;
     z-index: 20;
+    font-size: 20px;
 }
 .solucao img{
     top: 3325px;
@@ -402,7 +429,7 @@ p{
     z-index: 20;
     margin-left: 46.5%;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
 }
 
@@ -501,7 +528,7 @@ button{
 
 .container_infor_footer{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
     align-items: self-start;
     margin-bottom: 50px;
@@ -564,6 +591,9 @@ button{
     
 span {
     color: rgb(255, 255, 255);
+}
+.desperdicio{
+    position: relative;
 }
 
 

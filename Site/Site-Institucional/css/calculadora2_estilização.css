@@ -42,8 +42,6 @@ border: none;
 position: absolute;
 top: 2570px;
 left: 900px;
-   
-
 }
 
 legend {
@@ -66,12 +64,12 @@ button{
     font-weight: bold;
 }
 
-#div_eles, #div_nossa{
+#div_com, #div_sem{
     color: red;
     width: 175px;
     margin-top: 10px;
 }
 
-#div_nossa{
+#div_com{
     color: green;
 }

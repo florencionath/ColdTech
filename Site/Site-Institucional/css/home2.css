@@ -298,7 +298,7 @@ p{
     height: 440px;
     margin-left: 50%;
     border-radius: 10px;
-    top: 1810px; /*Pegando do começo do html*/
+    top: 1755px; /*Pegando do começo do html*/
     position: absolute;
     right: 30px;
 }
@@ -380,7 +380,7 @@ p{
 .info-graphics{
     background-color:  #001530;
     width: 40%;
-    height: 440px;
+    height: 500px;
     border-radius: 10px;
     top: 2600px; /*Pegando do começo do html*/
     position: absolute;
@@ -437,7 +437,7 @@ p{
 
 
 .fieldset-contato{
-   top: 4250px;
+   top: 4232px;
    width: fit-content;
    float: right;
    margin-right: 50px;
@@ -462,14 +462,23 @@ legend{
     display: flex; 
 }
 
+.formulario label{
+    justify-content: flex-start;
+    align-items: left;
+    display: flex;
+    
+}
+
 .formulario input{
     border-radius: 10px;
     border-color: #001530;
-    width: 85%;
+    width: 510px;
     padding: 10px;
     color: #001530;
     margin-top: 5px;
     margin-bottom: 10px;
+    display: flex;
+    justify-content: flex-start;
 }
 
 textarea{
