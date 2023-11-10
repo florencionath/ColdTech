@@ -1,13 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <title>Line Chart</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="dashbord.css">
+
+    <link rel="stylesheet" href="./css/dashboard-trasn.css">
     <style>
+
         canvas {
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -18,34 +20,102 @@
 <body>
 
     <div class="menu-lateral">
+
+        <div>
+    <img class="img_login" src="./assets/icone-dashboard.png" alt="imagem de um bonequinho">
+        </div>
+
         <div class="titulo">
             <h4>Menu</h4>
         </div>
         <div class="navbar">
     <ul>
-        <li><a href="#"></a>Transporte</li>
-        <li><a href="#"></a>Umidade</li>
-        <li><a href="#"></a>Medicamentos</li>
-        <li><a href="#"></a>Sair</li>
+        <li id="li_endereco" class="li_endereco"><a href="./endereco.html">Endereço</a></li>
+        <li class="li_armazenamento ativo"><a href="#">Transporte</a></li>
+        <li class="li_transporte"><a href="./dashbord.html">Armazenamento</a></li>
+        <li><a href="./login.html">Sair</a></li>
     </ul>
         </div>
     </div>
 
     <div class="container-grafico">
-        
-        <h1>Seja bem vindo</h1>
        
-        <div class="grafico">
-         <section style="width: 40vw; height: 40vh;">
-         <canvas class="grafico_umidade" id="dht11Umidade"></canvas>
-         </section>
-    
-         <section style="width: 40vw; height: 40vh;">
-         <canvas class="grafico_temperatura" id="dht11Temperatura"></canvas>
-         </section>
+        <h1>Transporte</h1>
+        
+        <br>
+        <h5>Lado Esquerdo - Sensor 1</h5>
+        
+        <div class="graficos-4">
+            
+            <div class="grafico-1">
+                
+                <div class="grafico-umidade1">
+                    <section style="width: 40vw; height: 40vh;">
+                        <canvas class="grafico_umidade" id="dht11Umidade"></canvas>
+                    </section>
+                </div>
+                
+                <div class="grafico-temperatura1">
+                    <section style="width: 40vw; height: 40vh;">
+                        <canvas class="grafico_temperatura" id="dht11Temperatura"></canvas>
+                    </section>
+                </div>
+            </div>
+            
+            
+            
+            <h5 class="titulo-grafico-direito">Lado Direito - Sensor 2</h5>
+            <div class="grafico-2">
+
+            <div class="grafico-umidade1">
+            <section style="width: 40vw; height: 40vh;">
+            <canvas class="grafico_umidade" id="dht11Umidade2"></canvas>
+            </section>
         </div>
+            <div class="grafico-temperatura1">
+            <section style="width: 40vw; height: 40vh;">
+            <canvas class="grafico_temperatura" id="dht11Temperatura2"></canvas>
+            </section>
+        </div>
+           </div>
+
     </div>
 
+    
+        <section class="alerta_umidade">
+
+            <p class="p_umidade">Alerta Umidade</p>
+            
+            <div class="quadrados">
+            <div class="alerta quadrado1"><p class="p_registro">25%</p></div>
+            <div class="alerta quadrado2"><p class="p_registro">30%</p></div>
+            <div class="alerta quadrado3"><p class="p_registro">35%</p></div>
+            <div class="alerta quadrado4"><p class="p_registro">40%</p></div>
+            <div class="alerta quadrado5"><p class="p_registro">70%</p></div>
+            <div class="alerta quadrado6"><p class="p_registro">75%</p></div>
+            <div class="alerta quadrado7"><p class="p_registro">80%</p></div>
+            <div class="alerta quadrado8"><p class="p_registro">80%</p></div>
+            </div>
+        
+        </section>
+    
+        <section class="alerta_temperatura">
+
+            <p class="p_temperatura">Alerta Temperatura</p>
+           
+            <div class="quadrados">
+            <div class="alerta quadrado1"><p class="p_registro">0°C</p></div>
+            <div class="alerta quadrado2"><p class="p_registro">1°C</p></div>
+            <div class="alerta quadrado3"><p class="p_registro">2°C</p></div>
+            <div class="alerta quadrado4"><p class="p_registro">3°C</p></div>
+            <div class="alerta quadrado5"><p class="p_registro">7°C</p></div>
+            <div class="alerta quadrado6"><p class="p_registro">8°C</p></div>
+            <div class="alerta quadrado7"><p class="p_registro">9°C</p></div>
+            <div class="alerta quadrado8"><p class="p_registro">10°C</p></div>
+           </div>
+        </section>
+
+    </div>
 
 
         <!-- <h1>Sensor Luminosidade</h1> -->
@@ -59,7 +129,9 @@
         <!-- <h1>Sensor Chave</h1> -->
      <section style="width: 100%; display: none">
      <canvas id="chave"></canvas>
-     </section>
+     </section> 
+
+     
 
 
     <script>
@@ -75,7 +147,8 @@
              label: 'Umidade',
              type: 'line',
              borderColor: ['rgb(0, 0, 255)'],
-             backgroundColor: ['rgb(0, 0, 255)']
+             backgroundColor: ['rgb(0, 0, 255)'],
+             fill: false,
             }
             ]
             },
@@ -124,8 +197,9 @@
                  datasets: [{
                  label: "Temperatura",
                  type: 'line',
-                 borderColor: ['rgb(128, 0, 128)'],
-                 backgroundColor: ['rgb(128, 0, 128)']
+                 borderColor: ['rgb(0, 255, 0)'],
+                 backgroundColor: ['rgb(0, 255, 0)'],
+                 fill: false,
                 }]
                 },
                 
@@ -162,6 +236,115 @@
         }
     }
 );
+
+
+                                        // GRAFICOS DO LADO DIREIRTO 
+
+    /* -- dht11Umidade -- */
+    var contextoDht11Umidade2 = document.getElementById('dht11Umidade2').getContext('2d');     
+     var dht11Umidade2 = new Chart(
+     contextoDht11Umidade2,
+        {
+         type: 'line',
+         data: {
+             datasets: [
+            {
+             label: 'Umidade',
+             type: 'line',
+             borderColor: ['rgb(0, 0, 255)'],
+             backgroundColor: ['rgb(0, 0, 255)'],
+             fill: false,
+            }
+            ]
+            },
+
+             options: {
+                 responsive: true,
+                 plugins: {
+                 title: {
+                 display: true,
+                 text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
+                 scales: {
+                         xAxes: [{
+                         distribution: 'series',
+                         ticks: {
+                             beginAtZero: true
+                            }
+                        }],
+
+                        yAxes: [{
+                         scaleLabel: {
+                         display: true,
+                         labelString: 'Umidade'
+                         },
+                         
+                         ticks: {
+                         beginAtZero: true
+                         }
+                        }]
+                    },
+                         animation: {
+                         duration: 0
+                    }
+                }
+            }
+        }
+    }
+);
+
+var contextoDht11Temperatura2 = document.getElementById('dht11Temperatura2').getContext('2d');
+         var dht11Temperatura2 = new Chart(
+            contextoDht11Temperatura2,
+            {
+             type: 'line',
+             data: {
+                 datasets: [{
+                 label: "Temperatura",
+                 type: 'line',
+                 borderColor: ['rgb(19, 1, 1)'],
+                 backgroundColor: ['rgb(19, 1, 1)'],
+                 fill: false,
+                }]
+                },
+                
+                options: {
+                 responsive: true,
+                 plugins: {
+                 title: {
+                 display: true,
+                 text: (ctx) => 'Point Style: ' + ctx.chart.data.datasets[0].pointStyle,
+                 
+                 scales: {
+                         xAxes: [{
+                         distribution: 'series',
+                             ticks: {
+                             beginAtZero: true
+                            }
+                        }],
+                        
+                         yAxes: [{
+                            scaleLabel: {
+                             display: true,
+                             labelString: 'Temperatura'
+                            },
+                         ticks: {
+                             beginAtZero: true
+                            }
+                        }]
+                    },
+                    animation: {
+                        duration: 0
+                    }
+                }
+            }
+        }
+    }
+);
+
+
+
+
+
                         /* -- luminosidade -- */
         var contextoLuminosidade = document.getElementById('luminosidade').getContext('2d');
         contextoLuminosidade.canvas.width = 1000;
@@ -305,6 +488,7 @@
             if (tempo[endpoint] == null) {
                 tempo[endpoint] = 0;
             }
+
             // Exibir à partir do último elemento exibido anteriormente
             var ultimaPaginacao = paginacao[endpoint];
             paginacao[endpoint] = valores.length;
@@ -325,6 +509,10 @@
         setInterval(() => {
             obterDados(dht11Umidade, 'dht11/umidade');
             obterDados(dht11Temperatura, 'dht11/temperatura');
+
+            obterDados(dht11Umidade2, 'dht11/umidade');
+            obterDados(dht11Temperatura2, 'dht11/temperatura');
+
             obterDados(luminosidade, 'luminosidade');
             obterDados(lm35Temperatura, 'lm35/temperatura');
             obterDados(chave, 'chave');
@@ -333,3 +521,10 @@
         </script>
 </body>
 </html>
+
+<script>
+    function negrito(id){
+      var linkAtivo = id;
+      linkAtivo.style = 'color: red'
+    }
+</script>
