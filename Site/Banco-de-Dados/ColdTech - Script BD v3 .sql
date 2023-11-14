@@ -6,11 +6,14 @@ CREATE TABLE empresa (
 idEmpresa INT PRIMARY KEY AUTO_INCREMENT,
 nomeEmpresa VARCHAR(40) NOT NULL,
 cnpj CHAR(14) NOT NULL,
-email VARCHAR(40) NOT NULL UNIQUE,
-CONSTRAINT chkemail CHECK (email LIKE ('%@%.%')),
+email VARCHAR(40) NOT NULL, -- UNIQUE,
+ -- CONSTRAINT chkemail CHECK (email LIKE ('%@%.%')),
 senha VARCHAR(15) NOT NULL, -- Validação com 8 caracteres sendo: no mínimo 1 especial, 1 em maiúscula e 1 numeral
 telefone CHAR(11) NOT NULL
 );
+
+DROP DATABASE Coldtech;
+DROP TABLE endereco;
     
  SELECT * FROM empresa;  
  
