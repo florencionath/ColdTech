@@ -37,7 +37,7 @@ function Exibir() {
 
 
     // O "Length" serve para saber o tamanho da palavra especificada antes do " . ", nesse caso o texto da variavel "nome"
-    if (nome.length > 7) {
+    if (nome.length >= 3) {
         div_nome.innerHTML = `O nome é valido! <br>`
     } else { div_nomeErrado.innerHTML = `Informe um nome válido <br>` }
 
@@ -91,6 +91,25 @@ function Exibir() {
 }          
 
 function cadastrar() {
+
+    
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          // crie um atributo que recebe o valor recuperado aqui
+          // Agora vá para o arquivo routes/usuario.js
+          nomeServer: nome,
+          emailServer: email,
+          cpfServer: cnpj,
+          senhaServer: senha,
+          telefoneServer: telefone
+        }),
+      })
+
     if(permiteCadastro){
         window.location.href = `./login.html`
     }
