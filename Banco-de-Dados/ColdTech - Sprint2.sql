@@ -18,7 +18,6 @@ bairro VARCHAR(50) NOT NULL,
 cidade VARCHAR(50) NOT NULL,
 estado VARCHAR(50) NOT NULL,
 cep CHAR(8) NOT NULL,
-tipo_end VARCHAR(15) NOT NULL,
 fk_empresa INT,
 CONSTRAINT fk_empresa FOREIGN KEY(fk_empresa)
 	REFERENCES empresa(id_empresa)
@@ -64,15 +63,15 @@ INSERT INTO empresa (nome, cnpj, email, senha, telefone_principal, telefone_secu
 
 SELECT * FROM empresa;
 
-INSERT INTO endereco (rua, bairro, cidade, estado, cep, tipo_end, fk_empresa) VALUES
-('Rua das Acácias', 'Centro', 'São Paulo', 'SP', '01234567', 'Comercial', 1),
-('Avenida dos Ipês', 'Jardins', 'Rio de Janeiro', 'RJ', '12345678', 'Residencial', 2),
-('Rua das Oliveiras', 'Centro', 'Belo Horizonte', 'MG', '23456789', 'Comercial', 3),
-('Avenida das Palmeiras', 'Liberdade', 'Salvador', 'BA', '34567890', 'Residencial', 4),
-('Rua das Rosas', 'Boa Vista', 'Recife', 'PE', '45678901', 'Comercial', 5),
-('Avenida das Tulipas', 'Centro', 'Curitiba', 'PR', '56789012', 'Residencial', 6),
-('Rua das Violetas', 'Vila Nova', 'Porto Alegre', 'RS', '67890123', 'Residencial', 1),
-('Avenida dos Girassóis', 'Jardim das Flores', 'Brasília', 'DF', '78901234', 'Comercial', 4);
+INSERT INTO endereco (rua, bairro, cidade, estado, cep, fk_empresa) VALUES
+('Rua das Acácias', 'Centro', 'São Paulo', 'SP', '01234567', 1),
+('Avenida dos Ipês', 'Jardins', 'Rio de Janeiro', 'RJ', '12345678', 2),
+('Rua das Oliveiras', 'Centro', 'Belo Horizonte', 'MG', '23456789', 3),
+('Avenida das Palmeiras', 'Liberdade', 'Salvador', 'BA', '34567890', 4),
+('Rua das Rosas', 'Boa Vista', 'Recife', 'PE', '45678901', 5),
+('Avenida das Tulipas', 'Centro', 'Curitiba', 'PR', '56789012',  6),
+('Rua das Violetas', 'Vila Nova', 'Porto Alegre', 'RS', '67890123', 1),
+('Avenida dos Girassóis', 'Jardim das Flores', 'Brasília', 'DF', '78901234', 4);
 
 SELECT * FROM endereco;
 
