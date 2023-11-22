@@ -17,7 +17,7 @@
         }
     </style>
 </head>
-<body>
+<body onload="validarSessao()">
 
     <div class="menu-lateral">
 
@@ -53,7 +53,7 @@
                                 </select> <br>
                               </p>
                             </section>
-                              <button onclick="Exibir()">Novo Cadastro</button>
+                              <button onclick="cadastrar()">Novo Cadastro</button>
                           </div>
               </section>
           
@@ -554,7 +554,7 @@
         }
         
         
-        function Exibir() {
+        function cadastrar() {
                overlay.style.display = "flex";
             }
         

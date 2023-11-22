@@ -15,7 +15,7 @@ telefone CHAR(11) NOT NULL
  SELECT * FROM empresa;  
  
  CREATE TABLE endereco (
-idEndereco INT AUTO_INCREMENT,
+idEndereco INT PRIMARY KEY AUTO_INCREMENT,
 fkEmp INT,
 CONSTRAINT fkEmp FOREIGN KEY (fkEmp)
 	REFERENCES empresa(idEmpresa),
@@ -23,50 +23,30 @@ rua VARCHAR(50) NOT NULL,
 bairro VARCHAR(50) NOT NULL,
 cidade VARCHAR(50) NOT NULL,
 estado VARCHAR(50) NOT NULL,
-cep CHAR(8) NOT NULL,
-tipoEnd VARCHAR(15) NOT NULL,
-CONSTRAINT chkEnd CHECK (tipoEnd IN ('Principal', 'Distribuidora')),
-PRIMARY KEY (idEndereco, fkEmp));
+cep CHAR(8) NOT NULL
+);
 
 SELECT * FROM endereco;
 
-CREATE TABLE medicamento (
-idMedicamento INT PRIMARY KEY AUTO_INCREMENT,
-nomeMedicamento VARCHAR(45) NOT NULL,
-qtdMedicamento INT NOT NULL,
-tempMax INT NOT NULL,
-tempMin INT NOT NULL,
-tipoMedicamento VARCHAR(14) NOT NULL,
-CONSTRAINT chkTipoMedicamento CHECK (tipoMedicamento IN ('líquido', 'cápsula', 'comprimido')));
-    
-SELECT * FROM medicamento;
-    
-CREATE TABLE transporte (
-idTransporte INT PRIMARY KEY AUTO_INCREMENT,
-fkEnd INT NOT NULL,
-CONSTRAINT fkEnd FOREIGN KEY (fkEnd)
-	REFERENCES endereco(idEndereco));
-    
-SELECT * FROM transporte;
+CREATE TABLE armazenamento (
+idArmazenamento INT PRIMARY KEY AUTO_INCREMENT,
+tipoArmazenamento VARCHAR(30) NOT NULL,
+fkEmpresa INT,
+CONSTRAINT consfkEmp FOREIGN KEY (fkEmpresa) REFERENCES Empresa (idEmpresa),
+CONSTRAINT chkTipoArmazenmanto CHECK (tipoArmazenamento IN ('Caminhão', 'Geladeira'))
+);
 
-CREATE TABLE ambiente (
-idAmbiente INT PRIMARY KEY AUTO_INCREMENT,
-tipoAmb VARCHAR(30) NOT NULL,
-CONSTRAINT chkTipoAmb CHECK (tipoAmb IN ('caixa térmica de EPS', 'bolsa térmica', 'refrigerador', 'camâra fria')),
-fkTransp INT,
-CONSTRAINT fkTransp FOREIGN KEY (fkTransp)
-	REFERENCES transporte(idTransporte));
-
-SELECT * FROM ambiente;
 
 CREATE TABLE sensor (
-idSensor INT PRIMARY KEY AUTO_INCREMENT,
-tipoSensor VARCHAR(20) NOT NULL, 
-CONSTRAINT chkTipoSensor CHECK (tipoSensor IN ('temperatura', 'temperatura e umidade', 'luminosidade', 'proximidade')),
+idSensor INT AUTO_INCREMENT,
 statusSensor VARCHAR(7) NOT NULL,
 CONSTRAINT chkStatusSensor CHECK (statusSensor IN ('ativo', 'inativo')),
 posicaoSensor VARCHAR(8) NOT NULL,
-CONSTRAINT chkPosicaoSens CHECK (posicaoSensor IN ('esquerda', 'direita', 'ambiente'))); 
+CONSTRAINT chkPosicaoSens CHECK (posicaoSensor IN ('esquerda', 'direita', 'armazenamento')),
+fkArmazenamento INT,
+CONSTRAINT consfkArmazen FOREIGN KEY (fkArmazenamento) REFERENCES Armazenamento (idArmazenamento),
+PRIMARY KEY (idSensor, fkArmazenamento)
+); 
 
 SELECT * FROM sensor;
 
@@ -75,18 +55,10 @@ idRegistro INT PRIMARY KEY AUTO_INCREMENT,
 fkSensor INT NOT NULL,
 CONSTRAINT fkSens FOREIGN KEY (fkSensor)
 	REFERENCES sensor(idSensor),
-fkAmb INT,
-CONSTRAINT fkAmb FOREIGN KEY (fkAmb)
-	REFERENCES ambiente(idAmbiente),
-fkTrsp INT,
-CONSTRAINT fkTrsp FOREIGN KEY (fkTrsp)
-	REFERENCES transporte(idTransporte),
-fkMedicamento INT NOT NULL,
-CONSTRAINT fkMed FOREIGN KEY (fkMedicamento)
-	REFERENCES medicamento(idMedicamento),
+fkArmazenamento INT,
+CONSTRAINT consfkArm FOREIGN KEY (fkArmazenamento)
+	REFERENCES armazenamento (idArmazenamento),
 metricas VARCHAR(10) NOT NULL DEFAULT 'Erro',
 dataHora DATETIME DEFAULT CURRENT_TIMESTAMP);
    
 SELECT * FROM registros;
-
-
