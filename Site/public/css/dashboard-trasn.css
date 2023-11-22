@@ -74,7 +74,7 @@ li {
     display: flex;
     flex-direction: column;
     margin: 0 25px;
-    width: 100%;
+    width: fit-content;
 }
 
 h1{
@@ -96,7 +96,7 @@ h2{
 
 }
 .container-grafico{
-    margin-left: 17%;
+   margin-left: 9%;
 }
 
 .grafico-1{
@@ -200,3 +200,67 @@ h2{
     background-color: white;
     border-radius: 8%;
 }
+
+.div_formCadastro{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+.card_flex{
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+}
+
+#div_cadastro{
+    margin-top: 50px;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-direction: column;
+}
+
+.container-     {
+    margin-left: -140px;
+}
+
+.form_caminhao{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 30%;
+    height: fit-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: none;
+    box-shadow: 0 0 10px 4px #ffffff;
+}
+
+#PopUp{
+    margin-left: 250px;
+    margin-top: -275px;
+}
+
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+} 
+#formulario {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+} 
+
