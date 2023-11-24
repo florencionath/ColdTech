@@ -1,17 +1,35 @@
-function cadastrar() { //CADASTRANDO COM FK
-    var fkRestaurante = sessionStorage.ID_USUARIO;
-    var armazenamento = caminhaoUso.value;
+
+var listaCaminhoes = []
+
+function cadastrarCaminhao() { //CADASTRANDO COM FK
+    var fkEmpresa = sessionStorage.ID_USUARIO;
+    var nomeArmazenamento = input_nomeCaminhao.value;
+    var renavam = input_renavam.value
 
     // console.log(armazenamento);
 
-    fetch(`/enderecos/cadastrar/${fkRestaurante}`, {
+    fetch(`/armazenamentos/cadastrarCaminhao/${fkEmpresa}`, {
         method: "post",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            armazenamentoServer: armazenamento
+            nomeArmazenamentoServer: nomeArmazenamento,
+            renavamServer: renavam
+            
         })
+    
+    })
+    .then((response) => {
+        if (response && response.ok) {
+            console.log(response)
+
+            listaCaminhoes.push(response.renavam);
+
+            console.log(listaCaminhoes);
+        }
+    }).catch((error) => {
+        console.log(error)
     })
 
     // .then(function (resposta) { //CARD DE REDIRECIONAMENTO
@@ -38,5 +56,9 @@ function cadastrar() { //CADASTRANDO COM FK
     //   });
 
     // return false;
+
+    console.log(fkEmpresa);
+    console.log(nomeArmazenamento);
+    console.log(renavam);
 
 }
