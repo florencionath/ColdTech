@@ -89,14 +89,15 @@ h2{
     justify-content: space-between;
 }
 
-.grafico_umidade{
+#section_umidade, #section_temperatura{
     border-radius: 10px;
     box-shadow: 0 0 10px 4px #ffffff;
+    height: fit-content;
+    width: 40vw;
 }
-
-.grafico_temperatura{
+.grafico_umidade_verde{
     border-radius: 10px;
-    box-shadow: 0 0 10px 4px #ffffff;
+    box-shadow: 0 0 10px 4px #07bf32;
 }
 
 .alerta_umidade{
