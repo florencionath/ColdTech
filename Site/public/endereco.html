@@ -9,9 +9,13 @@
     <link rel="stylesheet" href="./css/endereco.css">
     <!-- <script src="./js/endereco.js"></script> -->
     <title>Endereço</title>
+
+    <script src="./js/endereco-validacaoCep.js"></script>
+    <script src="./js/endereco-cadastro.js"></script>
+
 </head>
 
-<body>
+<body onload="validarSessao()"> 
 
     <div class="menu-lateral">
 
@@ -42,12 +46,12 @@
 
             <div class="container_inputs">
                 <label for="cep">CEP</label>
-                <input id="cep" type="text" required />
+                <input onblur="pesquisacep(this.value);" id="cep" type="text" required />
             </div>
 
             <div class="container_inputs">
-                <label for="logradouro">Logradouro</label>
-                <input id="logradouro" type="text" required />
+                <label for="rua">Rua</label>
+                <input id="rua" type="text" required />
             </div>
 
             <div class="container_inputs">
@@ -63,6 +67,11 @@
             <div class="container_inputs">
                 <label for="bairro">Bairro</label>
                 <input id="bairro" type="text" required />
+            </div>
+
+            <div class="container_inputs">
+                <label for="cidade">Cidade</label>
+                <input id="cidade" type="text" required />
             </div>
 
 
@@ -100,7 +109,7 @@
             </div>
 
             <!-- <button class="botao" <a href="./dashbord.html"></a>>Cadastrar</button></a> -->
-            <button onclick="abrir()" class="botao">Cadastrar</button>
+            <button onclick="cadastrar()" class="botao">Cadastrar</button>
         </form>
 
     </section>
