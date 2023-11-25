@@ -28,6 +28,11 @@ estado VARCHAR(50) NOT NULL,
 cep CHAR(8) NOT NULL
 );
 
+ALTER TABLE endereco ADD COLUMN numero INT;
+ALTER TABLE endereco ADD COLUMN complemento VARCHAR(40);
+
+DESCRIBE endereco;
+
 SELECT * FROM endereco;
 
 CREATE TABLE armazenamento (
