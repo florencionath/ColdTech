@@ -30,24 +30,13 @@ function cadastrarCaminhao(req, res) { // PARA CADASTRAR MEU CARDAPIO COM FK (id
 }
 
 
-function recuperarValor(req, res) { 
-        armazenamentoModel.recuperarCaminhoes()
-        .then(
-            function (resultado) {
-                res.json(resultado);
-            }
-        )
-            .catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log("Houve um erro ao realizar o get: ", erro.sqlMessage);
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    
+function listarCaminhoes(req, res) { 
+        armazenamentoModel.listarCaminhoes().then((resultado) => {
+          res.status(200).json(resultado);
+        });
 }
 
 module.exports = {
     cadastrarCaminhao, 
-    recuperarValor
+    listarCaminhoes
 }

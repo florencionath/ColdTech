@@ -14,6 +14,8 @@ telefone CHAR(11) NOT NULL
     
  SELECT * FROM empresa;  
  
+ SELECT * FROM armazenamento;
+ 
  CREATE TABLE endereco (
 idEndereco INT PRIMARY KEY AUTO_INCREMENT,
 fkEmp INT,
@@ -36,6 +38,13 @@ CONSTRAINT consfkEmp FOREIGN KEY (fkEmpresa) REFERENCES Empresa (idEmpresa),
 CONSTRAINT chkTipoArmazenmanto CHECK (tipoArmazenamento IN ('Caminhão', 'Geladeira'))
 );
 
+select * from armazenamento;
+
+ALTER TABLE armazenamento ADD COLUMN nomeArmazenamento VARCHAR(20);
+ALTER TABLE armazenamento ADD COLUMN renavam CHAR(9);
+
+
+SELECT nomeArmazenamento, renavam FROM armazenamento;
 
 CREATE TABLE sensor (
 idSensor INT AUTO_INCREMENT,

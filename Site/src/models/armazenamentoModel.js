@@ -8,15 +8,12 @@ function cadastrarCaminhao(fkEmpresa, nomeArmazenamento, renavam) { //Ta receben
     return database.executar(instrucao);
 }
 
-function recuperarCaminhoes() {
-    var instrucao = `
-     SELECT nomeArmazenamento, renavam FROM armazenamento;
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
+function listarCaminhoes() {
+        var query = `SELECT * FROM armazenamento`;
+        return database.executar(query);
 }
 
 module.exports = {
     cadastrarCaminhao, 
-    recuperarCaminhoes
+    listarCaminhoes
 }

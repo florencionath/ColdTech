@@ -22,7 +22,7 @@
         }
     </style>
 </head>
-<body onload ="validarSessao()">
+<body onload ="listarCaminhoes()">
 
     <div class="menu-lateral">
 
@@ -53,8 +53,8 @@
                               <p>
                                 <label for="cadastroCaminhao">Caminhão:</label>
                                 <select id="caminhaoUso">
-                                  <option value="0"> ----- </option>
-                                  <option value="1"> Caminhão 1 </option>
+                                  <option selected> Selecione um caminhão </option>
+                                  <!-- <option value="1"> Caminhão 1 </option> -->
                                 </select> <br>
                               </p>
                             </section>
@@ -572,7 +572,6 @@
               var nome = input_nomeCaminhao.value;
               var renavam = input_renavam.value
 
-        
               var tamanho = listaCaminhao.length;
         
               listaCaminhao.push(nome);
@@ -592,6 +591,33 @@
          var linkAtivo = id;
          linkAtivo.style = 'color: red'
         }
+
+
+        function listarCaminhoes() {
+            fetch("/armazenamentos/listarCaminhoes", {
+              method: "GET", //pegar caminhões
+            })
+              .then(function (resposta) {
+                console.log(resposta);
+                resposta.json().then((caminhoes) => {
+
+                    var tamanho = caminhoes.length;
+
+                        for(var contador = 0; contador < tamanho; contador++){
+                            var caminhaoAtual = caminhoes[contador];
+
+                            caminhaoUso.innerHTML += `<option value='${caminhaoAtual.idArmazenamento}'>${caminhaoAtual.nomeArmazenamento}</option>`;
+                        }
+
+                    console.log(caminhaoAtual);
+
+                });
+              })
+              .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+              });
+          }
+
         
         </script>
         </body>

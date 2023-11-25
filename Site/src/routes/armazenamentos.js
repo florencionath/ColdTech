@@ -7,8 +7,9 @@ router.post("/cadastrarCaminhao/:fkEmpresa", function (req, res) { //CADASTRANDO
    armazenamentoController.cadastrarCaminhao(req, res);
 });
 
-router.get("/trazerCaminhoes", function(req, res) {
-   armazenamentoController.recuperarValor(req, res)
+router.get("/listarCaminhoes", function(req, res) {
+   armazenamentoController.listarCaminhoes(req, res)
 })
+
 
 module.exports = router;

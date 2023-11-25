@@ -57,8 +57,8 @@ function cadastrarCaminhao() { //CADASTRANDO COM FK
 
     // return false;
 
-    console.log(fkEmpresa);
-    console.log(nomeArmazenamento);
-    console.log(renavam);
+
+    
+
 
 }
