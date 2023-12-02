@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./css/dashboard-trasn.css">
+
   
     <script src="./js/validarSessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
 
@@ -22,7 +23,7 @@
         }
     </style>
 </head>
-<body onload ="listarCaminhoes()">
+<body onload ="listarCaminhoes(), validarSessao()">
 
     <div class="menu-lateral">
 
@@ -34,16 +35,18 @@
             <h4>Menu</h4>
         </div>
         <div class="navbar">
-    <ul>
-        <li id="li_endereco" class="li_endereco"><a href="./endereco.html">Endereço</a></li>
-        <li class="li_armazenamento ativo"><a href="#">Transporte</a></li>
-        <li class="li_transporte"><a href="./dashbord.html">Armazenamento</a></li>
-        <li><a href="./login.html">Sair</a></li>
-    </ul>
+            <ul>
+                <li id="li_endereco" class="li_endereco"><a href="./endereco.html">Endereço</a></li>
+                <li class="li_transporte"><a href="./dahsboard-transporte.html">Transporte</a></li>
+                <li class="li_armazenamento ativo"><a href="./dashbord.html">Armazenamento</a></li>
+                <li><a onclick="limparSessao()">Sair</a></li>
+            </ul>
         </div>
     </div>
 
     <div class="container-grafico">
+
+        <h1>Seja bem vindo, <span id="mensagem_usuario"></span></h1>
 
         <div class="container-grafico">
 

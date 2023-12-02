@@ -7,11 +7,14 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/endereco.css">
+
     <!-- <script src="./js/endereco.js"></script> -->
     <title>Endereço</title>
 
     <script src="./js/endereco-validacaoCep.js"></script>
     <script src="./js/endereco-cadastro.js"></script>
+
+    <script src="./js/validarSessao.js"></script> <!--VALIDAÇÃO DA SESSÃO-->
 
 </head>
 
@@ -28,10 +31,10 @@
         </div>
         <div class="navbar">
             <ul>
-                <li class="ativo"><a href="./endereco.html">Endereço</a></li>
-                <li><a href="#">Transporte</a></li>
-                <li><a href="./dashbord.html">Armazenamento</a></li>
-                <li><a href="./login.html">Sair</a></li>
+                <li id="li_endereco" class="li_endereco"><a href="./endereco.html">Endereço</a></li>
+                <li class="li_transporte"><a href="./dahsboard-transporte.html">Transporte</a></li>
+                <li class="li_armazenamento ativo"><a href="./dashbord.html">Armazenamento</a></li>
+                <li><a onclick="limparSessao()">Sair</a></li>
             </ul>
         </div>
     </div>
