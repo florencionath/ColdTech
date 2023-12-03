@@ -61,6 +61,14 @@ const serial = async (
                 'INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, horario, chave) VALUES (?, ?, ?, ?, current_timestamp(), ?)',
                 [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, horario, chave]
             );
+            // await poolBancoDados.execute( deixar 2 inserts
+            //     'INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, horario, chave) VALUES (2, ?, ?, ?, current_timestamp(), ?)',
+            //     [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, horario, chave]
+            // );
+            // await poolBancoDados.execute(
+            //     'INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, horario, chave) VALUES (3, ?, ?, ?, current_timestamp(), ?)',
+            //     [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, horario, chave]
+            // );
         }
 
     });

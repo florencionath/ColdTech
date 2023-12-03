@@ -52,6 +52,9 @@ CONSTRAINT consfkArmazen FOREIGN KEY (fkArmazenamento) REFERENCES Armazenamento 
 PRIMARY KEY (idSensor, fkArmazenamento)
 ); 
 
+ALTER TABLE sensor DROP CONSTRAINT chkStatusSensor; -- Deixando como a modelagem mais atual
+ALTER TABLE sensor DROP COLUMN statusSensor; -- Deixando como a modelagem mais atual
+
 CREATE TABLE registros (
 idRegistro INT PRIMARY KEY AUTO_INCREMENT,
 fkSensor INT NOT NULL,
@@ -74,6 +77,8 @@ SELECT * FROM registros;
 SELECT * FROM empresa;
 SELECT * FROM sensor;
 SELECT * FROM armazenamento;
+
+DESCRIBE registros;
 
 -- CRIANDO UM USUÁRIO PARA O ARDUÍNO
 	CREATE USER 'userColdTech'@'ipdamaquina' IDENTIFIED BY 'informeasenha';
