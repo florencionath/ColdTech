@@ -1,0 +1,17 @@
+grupodepi09
+
+endereço: coldtech-help.freshdesk.com
+
+Use o e-mail que criámos para si
+support@coldtech-help.freshdesk.com
+Todos os e-mails enviados para este endereço serão convertidos em tickets no Freshdesk.
+
+Endereço do Freshdesk
+coldtech-help.freshdesk.com
+
+O seu site de apoio para os clientes e a equipa.
+Endereço de e-mail de apoio
+
+support@coldtech-help.freshdesk.com
+
+Todos os e-mails enviados para este endereço criarão automaticamente tickets no Freshdesk.
