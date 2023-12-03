@@ -11,11 +11,7 @@ CONSTRAINT chkemail CHECK (email LIKE ('%@%.%')),
 senha VARCHAR(15) NOT NULL, -- Validação com 8 caracteres sendo: no mínimo 1 especial, 1 em maiúscula e 1 numeral
 telefone CHAR(11) NOT NULL
 );
-    
- SELECT * FROM empresa;  
- 
- SELECT * FROM armazenamento;
- 
+
  CREATE TABLE endereco (
 idEndereco INT PRIMARY KEY AUTO_INCREMENT,
 fkEmp INT,
@@ -30,9 +26,7 @@ cep CHAR(8) NOT NULL
 
 ALTER TABLE endereco ADD COLUMN numero INT;
 ALTER TABLE endereco ADD COLUMN complemento VARCHAR(40);
-
 DESCRIBE endereco;
-
 SELECT * FROM endereco;
 
 CREATE TABLE armazenamento (
@@ -43,12 +37,8 @@ CONSTRAINT consfkEmp FOREIGN KEY (fkEmpresa) REFERENCES Empresa (idEmpresa),
 CONSTRAINT chkTipoArmazenmanto CHECK (tipoArmazenamento IN ('Caminhão', 'Geladeira'))
 );
 
-select * from armazenamento;
-
 ALTER TABLE armazenamento ADD COLUMN nomeArmazenamento VARCHAR(20);
 ALTER TABLE armazenamento ADD COLUMN renavam CHAR(9);
-
-
 SELECT nomeArmazenamento, renavam FROM armazenamento;
 
 CREATE TABLE sensor (
@@ -62,8 +52,6 @@ CONSTRAINT consfkArmazen FOREIGN KEY (fkArmazenamento) REFERENCES Armazenamento 
 PRIMARY KEY (idSensor, fkArmazenamento)
 ); 
 
-SELECT * FROM sensor;
-
 CREATE TABLE registros (
 idRegistro INT PRIMARY KEY AUTO_INCREMENT,
 fkSensor INT NOT NULL,
@@ -75,4 +63,19 @@ CONSTRAINT consfkArm FOREIGN KEY (fkArmazenamento)
 metricas VARCHAR(10) NOT NULL DEFAULT 'Erro',
 dataHora DATETIME DEFAULT CURRENT_TIMESTAMP);
    
+ALTER TABLE registros DROP CONSTRAINT consfkArm; -- Deletando primeiro a constraint
+ALTER TABLE registros DROP COLUMN fkArmazenamento; -- Excluindo campo fkArmazenamento
+ALTER TABLE registros DROP COLUMN metricas; -- Excluindo campo fkArmazenamento
+
+ALTER TABLE registros ADD COLUMN dht11_umidade FLOAT; -- ADD campo de acordo com nova modelagem
+ALTER TABLE registros ADD COLUMN dht11_temperatura FLOAT;
+
 SELECT * FROM registros;
+SELECT * FROM empresa;
+SELECT * FROM sensor;
+SELECT * FROM armazenamento;
+
+-- CRIANDO UM USUÁRIO PARA O ARDUÍNO
+	CREATE USER 'userColdTech'@'ipdamaquina' IDENTIFIED BY 'informeasenha';
+		GRANT ALL PRIVILEGES ON ColdTech.* TO 'userColdTech'@'ipdamaquina';
+			FLUSH PRIVILEGES;
