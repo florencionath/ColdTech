@@ -43,7 +43,7 @@ Serial.print(";");
 //  Serial.print("0");
  //}
 Serial.println();
-delay(2000);
+delay(20000);
 }
 
 
