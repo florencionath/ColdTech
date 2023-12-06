@@ -23,6 +23,8 @@ float dht11_temperatura = dht.readTemperature();
 float dht11_umidade2 = dht.readHumidity();
 float dht11_temperatura2 = dht.readTemperature();
 dht11_temperatura = dht11_temperatura;
+dht11_temperatura2 = dht11_temperatura2;
+
 
 Serial.print(dht11_umidade = 50);
 Serial.print(";");

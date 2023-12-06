@@ -9,10 +9,12 @@ const HABILITAR_OPERACAO_INSERIR = true;
 const serial = async (
     valoresDht11Umidade,
     valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoreshorario,
-    valoresChave
+    valoresDht11Umidade2,
+    valoresDht11Temperatura2,
+    // valoresLuminosidade,
+    // valoresLm35Temperatura,
+    valoreshorario
+    // valoresChave
 ) => {
     const poolBancoDados = mysql.createPool(
         {
@@ -42,19 +44,23 @@ const serial = async (
         const valores = data.split(';');
         const dht11Umidade = parseFloat(valores[0]);
         const dht11Temperatura = parseFloat(valores[1]);
-        const luminosidade = parseFloat(valores[2]);
-        const lm35Temperatura = parseFloat(valores[3]);
+        const dht11Umidade2 = parseFloat(valores[2]);
+        const dht11Temperatura2 = parseFloat(valores[3]);
+        // const luminosidade = parseFloat(valores[2]);
+        // const lm35Temperatura = parseFloat(valores[3]);
         const horario = parseFloat(valores[10]);
 
-        const chave = parseInt(valores[4]);
+        // const chave = parseInt(valores[4]);
 
         valoresDht11Umidade.push(dht11Umidade);
         valoresDht11Temperatura.push(dht11Temperatura);
-        valoresLuminosidade.push(luminosidade);
-        valoresLm35Temperatura.push(lm35Temperatura);
+        valoresDht11Umidade2.push(dht11Umidade2);
+        valoresDht11Temperatura2.push(dht11Temperatura2);
+        // valoresLuminosidade.push(luminosidade);
+        // valoresLm35Temperatura.push(lm35Temperatura);
         valoreshorario.push(horario);
 
-        valoresChave.push(chave);
+        // valoresChave.push(chave);
 
         console.log("==================================");
         console.log("VALORES");
@@ -63,8 +69,8 @@ const serial = async (
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
-                'INSERT INTO registros (fkSensor, dht11_umidade, dht11_temperatura) VALUES (?, ?, ?)',
-                [1, dht11Umidade, dht11Temperatura]
+                'INSERT INTO registros (fkSensor, dht11_umidade, dht11_temperatura, dht11_umidade2, dht11_temperatura2) VALUES (?, ?, ?, ?, ?)',
+                [1, dht11Umidade, dht11Temperatura, dht11Umidade2, dht11Temperatura2]
             );
         }
 
@@ -77,9 +83,11 @@ const serial = async (
 const servidor = (
     valoresDht11Umidade,
     valoresDht11Temperatura,
-    valoresLuminosidade,
-    valoresLm35Temperatura,
-    valoresChave
+    valoresDht11Umidade2,
+    valoresDht11Temperatura2,
+    // valoresLuminosidade,
+    // valoresLm35Temperatura,
+    // valoresChave
 ) => {
     const app = express();
     app.use((request, response, next) => {
@@ -96,38 +104,50 @@ const servidor = (
     app.get('/sensores/dht11/temperatura', (_, response) => {
         return response.json(valoresDht11Temperatura);
     });
-    app.get('/sensores/luminosidade', (_, response) => {
-        return response.json(valoresLuminosidade);
+    app.get('/sensores/dht11/umidade2', (_, response) => {
+        return response.json(valoresDht11Umidade2);
     });
-    app.get('/sensores/lm35/temperatura', (_, response) => {
-        return response.json(valoresLm35Temperatura);
+    app.get('/sensores/dht11/temperatura2', (_, response) => {
+        return response.json(valoresDht11Temperatura2);
     });
-    app.get('/sensores/chave', (_, response) => {
-        return response.json(valoresChave);
-    });
+    // app.get('/sensores/luminosidade', (_, response) => {
+    //     return response.json(valoresLuminosidade);
+    // });
+    // app.get('/sensores/lm35/temperatura', (_, response) => {
+    //     return response.json(valoresLm35Temperatura);
+    // });
+    // app.get('/sensores/chave', (_, response) => {
+    //     return response.json(valoresChave);
+    // });
 }
 
 (async () => {
     const valoresDht11Umidade = [];
     const valoresDht11Temperatura = [];
-    const valoresLuminosidade = [];
-    const valoresLm35Temperatura = [];
+    const valoresDht11Umidade2 = [];
+    const valoresDht11Temperatura2 = [];
+    // const valoresLuminosidade = [];
+    // const valoresLm35Temperatura = [];
     const valoreshorario = [];
-    const valoresChave = [];
+    // const valoresChave = [];
     await serial(
         valoresDht11Umidade,
         valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoreshorario,
-        valoresChave
+        valoresDht11Umidade2,
+        valoresDht11Temperatura2,
+        // valoresLuminosidade,
+        // valoresLm35Temperatura,
+        valoreshorario
+        // valoresChave
     );
     servidor(
         valoresDht11Umidade,
         valoresDht11Temperatura,
-        valoresLuminosidade,
-        valoresLm35Temperatura,
-        valoreshorario,
-        valoresChave
+        valoresDht11Umidade2,
+        valoresDht11Temperatura2,
+        // valoresLuminosidade,
+        // valoresLm35Temperatura,
+        valoreshorario
+        // valoresChave
     );
 })();
