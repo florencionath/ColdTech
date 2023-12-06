@@ -58,19 +58,29 @@ CONSTRAINT fkSens FOREIGN KEY (fkSensor)
 dht11_umidade FLOAT,
 dht11_temperatura FLOAT,
 dataHora DATETIME DEFAULT CURRENT_TIMESTAMP());
+
+alter table registros add column dht11_umidade2 float;
+alter table registros add column dht11_temperatura2 float;
    
 
-SELECT * FROM registros;
+SELECT idRegistro as ID, fkSensor as Sensor, dht11_temperatura as Temperatura, dht11_umidade as Umidade, dht11_umidade2 as Umidade2, dht11_temperatura2 as Temperatura2, dataHora as Dia FROM registros;
 SELECT * FROM empresa;
 SELECT * FROM sensor;
 SELECT * FROM armazenamento;
+select * from registros;
+desc registros;
+
+show databases;
 
 
 -- CRIANDO UM USUÁRIO PARA O ARDUÍNO
 	 CREATE USER 'userColdTech'@'10.18.32.199' IDENTIFIED BY 'verdeverde';
 	    GRANT ALL PRIVILEGES ON ColdTech.* TO 'userColdTech'@'10.18.32.199';
 		   FLUSH PRIVILEGES;
-        
+           
+         
+          insert into sensor values
+           (null, "esquerda", 1);
        
 select * from sensor;
 

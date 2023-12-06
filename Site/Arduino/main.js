@@ -56,6 +56,11 @@ const serial = async (
 
         valoresChave.push(chave);
 
+        console.log("==================================");
+        console.log("VALORES");
+        console.log(dht11Umidade);
+        console.log(dht11Temperatura);
+
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
                 'INSERT INTO registros (fkSensor, dht11_umidade, dht11_temperatura) VALUES (?, ?, ?)',
