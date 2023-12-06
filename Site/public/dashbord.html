@@ -426,12 +426,18 @@
                     grafico.update();
                 }
                 // var valorMenor = valor < 10;
-                if (valorT > 10) {
-                    section_temperatura.style.boxShadow = "0 0 10px 4px #ff0000"
+                if (valorT >= 3 && valorT <=7) {
+                    section_temperatura.style.boxShadow = "0 0 10px 4px #40cb83"
+                } else if(valorT == 2 || valorT == 8){
+                    section_temperatura.style.boxShadow = "0 0 10px 4px #DAA520"
+                } else if(valorT == 1){
+                    section_temperatura.style.boxShadow = "0 0 10px 4px #FF4500"
+                } else{
+                    section_temperatura.style.boxShadow = "0 0 10px 4px red"
                 }
 
-                if (valorH > 6) {
-                    section_umidade.style.boxShadow = "0 0 10px 4px #07bf32"
+                if (valorH > 10) {
+                    section_umidade.style.boxShadow = "0 0 10px 4px #40cb83"
                 }
             })
         }
@@ -459,3 +465,12 @@
         linkAtivo.style = 'color: red'
     }
 </script>
+
+
+<script>
+	window.fwSettings={
+	'widget_id':153000000830
+	};
+	!function(){if("function"!=typeof window.FreshworksWidget){var n=function(){n.q.push(arguments)};n.q=[],window.FreshworksWidget=n}}() 
+</script>
+<script type='text/javascript' src='https://widget.freshworks.com/widgets/153000000830.js' async defer></script>

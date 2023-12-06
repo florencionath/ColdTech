@@ -13,7 +13,7 @@ function cadastrarCaminhao(req, res) { // PARA CADASTRAR MEU CARDAPIO COM FK (id
     } else if (renavam == undefined) {
         res.status(403).send("O renavam está indefinido!");
     } else {
-        armazenamentoModel.cadastrarCaminhao(fkEmpresa, nomeArmazenamento, renavam)
+        armazenamentoModel.cadastrarCaminhao( nomeArmazenamento, renavam, fkEmpresa)
             .then(
                 function (resultado) {
                     res.json(resultado);

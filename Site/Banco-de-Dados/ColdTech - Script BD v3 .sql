@@ -11,50 +11,36 @@ CONSTRAINT chkemail CHECK (email LIKE ('%@%.%')),
 senha VARCHAR(15) NOT NULL, -- Validação com 8 caracteres sendo: no mínimo 1 especial, 1 em maiúscula e 1 numeral
 telefone CHAR(11) NOT NULL
 );
-    
- SELECT * FROM empresa;  
- 
- SELECT * FROM armazenamento;
- 
+
  CREATE TABLE endereco (
 idEndereco INT PRIMARY KEY AUTO_INCREMENT,
 fkEmp INT,
 CONSTRAINT fkEmp FOREIGN KEY (fkEmp)
 	REFERENCES empresa(idEmpresa),
 rua VARCHAR(50) NOT NULL,
+numero INT,
 bairro VARCHAR(50) NOT NULL,
+complemento VARCHAR(40),
 cidade VARCHAR(50) NOT NULL,
 estado VARCHAR(50) NOT NULL,
 cep CHAR(8) NOT NULL
 );
 
-ALTER TABLE endereco ADD COLUMN numero INT;
-ALTER TABLE endereco ADD COLUMN complemento VARCHAR(40);
-
 DESCRIBE endereco;
-
 SELECT * FROM endereco;
 
 CREATE TABLE armazenamento (
 idArmazenamento INT PRIMARY KEY AUTO_INCREMENT,
 tipoArmazenamento VARCHAR(30) NOT NULL,
+ nomeArmazenamento VARCHAR(20),
+ renavam CHAR(9),
 fkEmpresa INT,
 CONSTRAINT consfkEmp FOREIGN KEY (fkEmpresa) REFERENCES Empresa (idEmpresa),
 CONSTRAINT chkTipoArmazenmanto CHECK (tipoArmazenamento IN ('Caminhão', 'Geladeira'))
 );
 
-select * from armazenamento;
-
-ALTER TABLE armazenamento ADD COLUMN nomeArmazenamento VARCHAR(20);
-ALTER TABLE armazenamento ADD COLUMN renavam CHAR(9);
-
-
-SELECT nomeArmazenamento, renavam FROM armazenamento;
-
 CREATE TABLE sensor (
 idSensor INT AUTO_INCREMENT,
-statusSensor VARCHAR(7) NOT NULL,
-CONSTRAINT chkStatusSensor CHECK (statusSensor IN ('ativo', 'inativo')),
 posicaoSensor VARCHAR(8) NOT NULL,
 CONSTRAINT chkPosicaoSens CHECK (posicaoSensor IN ('esquerda', 'direita', 'armazenamento')),
 fkArmazenamento INT,
@@ -62,17 +48,38 @@ CONSTRAINT consfkArmazen FOREIGN KEY (fkArmazenamento) REFERENCES Armazenamento 
 PRIMARY KEY (idSensor, fkArmazenamento)
 ); 
 
-SELECT * FROM sensor;
+
 
 CREATE TABLE registros (
 idRegistro INT PRIMARY KEY AUTO_INCREMENT,
 fkSensor INT NOT NULL,
 CONSTRAINT fkSens FOREIGN KEY (fkSensor)
 	REFERENCES sensor(idSensor),
-fkArmazenamento INT,
-CONSTRAINT consfkArm FOREIGN KEY (fkArmazenamento)
-	REFERENCES armazenamento (idArmazenamento),
-metricas VARCHAR(10) NOT NULL DEFAULT 'Erro',
-dataHora DATETIME DEFAULT CURRENT_TIMESTAMP);
+dht11_umidade FLOAT,
+dht11_temperatura FLOAT,
+dataHora DATETIME DEFAULT CURRENT_TIMESTAMP());
    
+
 SELECT * FROM registros;
+SELECT * FROM empresa;
+SELECT * FROM sensor;
+SELECT * FROM armazenamento;
+
+
+-- CRIANDO UM USUÁRIO PARA O ARDUÍNO
+	 CREATE USER 'userColdTech'@'10.18.32.199' IDENTIFIED BY 'verdeverde';
+	    GRANT ALL PRIVILEGES ON ColdTech.* TO 'userColdTech'@'10.18.32.199';
+		   FLUSH PRIVILEGES;
+        
+       
+select * from sensor;
+
+insert into sensor values
+(null, "direita", 1);
+
+select * from registros;
+
+
+
+select * from armazenamento;
+

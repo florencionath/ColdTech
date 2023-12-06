@@ -20,7 +20,7 @@ const serial = async (
             port: 3306,
             user: 'root',
             password: '@Verdao7',
-            database: 'metricas'
+            database: 'ColdTech'
         }
     ).promise();
 
@@ -58,8 +58,8 @@ const serial = async (
 
         if (HABILITAR_OPERACAO_INSERIR) {
             await poolBancoDados.execute(
-                'INSERT INTO sensores (dht11_umidade, dht11_temperatura, luminosidade, lm35_temperatura, horario, chave) VALUES (?, ?, ?, ?, current_timestamp(), ?)',
-                [dht11Umidade, dht11Temperatura, luminosidade, lm35Temperatura, horario, chave]
+                'INSERT INTO registros (fkSensor, dht11_umidade, dht11_temperatura) VALUES (?, ?, ?)',
+                [1, dht11Umidade, dht11Temperatura]
             );
         }
 
